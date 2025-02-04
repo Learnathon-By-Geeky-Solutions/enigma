@@ -1,12 +1,21 @@
-const CommonLayout = ({ children }: { children: React.ReactNode }) => {
+import { cn } from "@/lib/utils";
+
+interface CommonLayoutProps {
+    children: React.ReactNode;
+    className?: string;
+};
+
+const CommonLayout = ({ children, className }: CommonLayoutProps) => {
     return (
-        <>
+        <div className={cn("flex min-h-screen flex-col", className)}>
             {/* navbar */}
-            Navbar
-            <div className="min-h-[calc(100vh-92px)]">{children}</div>
+            <header>
+                <nav>Navbar</nav>
+            </header>
+            <main className="flex-grow">{children}</main>
             {/* footer */}
-            Footer
-        </>
+            <footer>Footer</footer>
+        </div>
     );
 };
 
