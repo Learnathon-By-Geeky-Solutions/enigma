@@ -7,8 +7,14 @@ import { usePathname } from 'next/navigation';
 import { LayoutGrid, UserRound } from 'lucide-react';
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './sheet';
 import Container from './container';
+import { LOGO_URL } from '@/config/constants';
 
-const navLink = [
+interface NavLink {
+    title: string;
+    url: string;
+};
+
+const navLink: NavLink[] = [
     {
         title: 'Home',
         url: '/',
@@ -32,7 +38,7 @@ const Navbar = () => {
         setIsClient(true);
     }, []);
 
-    if (!isClient) return null;
+    if (typeof window === 'undefined' || !isClient) return null;
 
     return (
         <header className='fixed top-0 left-0 right-0 z-50 px-4 py-6 text-[#161439] bg-green-100'>
@@ -40,7 +46,7 @@ const Navbar = () => {
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>
                         <Image
-                            src='https://skillgro-react.netlify.app/assets/img/logo/logo.svg'
+                            src={LOGO_URL}
                             alt='Logo'
                             width={153}
                             height={38}
@@ -90,7 +96,7 @@ const Navbar = () => {
                             <SheetContent className='w-3/5 bg-white'>
                                 <SheetHeader>
                                     <Image
-                                        src='https://skillgro-react.netlify.app/assets/img/logo/logo.svg'
+                                        src={LOGO_URL}
                                         alt='Logo'
                                         width={153}
                                         height={38}
