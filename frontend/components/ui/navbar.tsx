@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -31,14 +30,6 @@ const navLink: NavLink[] = [
 
 const Navbar = () => {
     const pathname = usePathname();
-    const [isHovered, setIsHovered] = useState(false);
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
-    if (typeof window === 'undefined' || !isClient) return null;
 
     return (
         <header className='fixed top-0 left-0 right-0 z-50 px-4 py-6 text-[#161439] bg-green-100'>
@@ -73,6 +64,7 @@ const Navbar = () => {
                     <Link
                         href='/login'
                         className='px-7 py-2 font-semibold rounded-full bg-[#FFC224] hover:text-white hover:bg-[#5751E1] hidden lg:block border border-gray-400'
+                        aria-label='Log in to your account'
                     >
                         Log in
                     </Link>
@@ -209,9 +201,7 @@ const Navbar = () => {
                                         </Link>
                                         <Link
                                             href='#'
-                                            className='size-10 flex justify-center items-center border rounded text-gray-500 hover:bg-[#5751E1] hover:text-white'
-                                            onMouseEnter={() => setIsHovered(true)}
-                                            onMouseLeave={() => setIsHovered(false)}
+                                            className='size-10 flex justify-center items-center border rounded text-gray-500 hover:bg-[#5751E1] hover:text-white group'
                                         >
                                             <svg
                                                 xmlns='http://www.w3.org/2000/svg'
@@ -228,7 +218,7 @@ const Navbar = () => {
                                                 <path d='M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z' />
                                                 <polygon
                                                     points='9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02'
-                                                    fill={isHovered ? '#5751E1' : 'white'}
+                                                    className='fill-white group-hover:fill-[#5751E1]'
                                                 />
                                             </svg>
                                         </Link>
