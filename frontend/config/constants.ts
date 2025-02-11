@@ -1,0 +1,1 @@
+export const LOGO_URL = process.env.NEXT_PUBLIC_LOGO_URL || 'https://skillgro-react.netlify.app/assets/img/logo/logo.svg';
