@@ -1,32 +1,16 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+
 import { LayoutGrid, UserRound } from 'lucide-react';
+
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './sheet';
 import Container from './container';
+
 import { LOGO_URL } from '@/config/constants';
-
-interface NavLink {
-    title: string;
-    url: string;
-};
-
-const navLink: NavLink[] = [
-    {
-        title: 'Home',
-        url: '/',
-    },
-    {
-        title: 'Categories',
-        url: '/categories',
-    },
-    {
-        title: 'About Us',
-        url: '/about',
-    },
-];
+import { navLink } from '@/config/navigation';
 
 const Navbar = () => {
     const pathname = usePathname();
