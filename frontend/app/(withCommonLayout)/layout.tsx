@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +14,7 @@ const CommonLayout = ({ children, className }: CommonLayoutProps) => {
 
             <main className="flex-grow">{children}</main>
             
-            <footer>Footer</footer>
+            <Footer />
         </div>
     );
 };
