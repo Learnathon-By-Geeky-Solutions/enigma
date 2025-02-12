@@ -11,7 +11,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YouTubeIcon } f
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
-    
+
     return (
         <footer>
             <div className='px-4 py-20 md:px-14 bg-color-black'>
@@ -160,12 +160,12 @@ const Footer = () => {
                     <p className='text-center'>© 2010-{currentYear} skillgro.com. All rights reserved.</p>
                 </div>
                 <div className='flex gap-3 font-medium'>
-                    <Link href='/' className='list-wrap'>
+                    <Link href='#' className='list-wrap' aria-label='Terms of Use'>
                         Term of Use
                     </Link>
                     <p>|</p>
-                    <Link href='/' className='list-wrap'>
-                        Privacy Policy
+                    <Link href='#' className='list-wrap' aria-label='Privacy & Policy'>
+                        Privacy & Policy
                     </Link>
                 </div>
             </div>
