@@ -24,9 +24,19 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 32px;
+    margin-top: clamp(16px, 5vw, 32px);
 }
 
 .app-download a img {
     border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+.app-download a:hover img {
+    transform: scale(1.05);
+}
+
+.app-download a:focus-visible {
+    outline: 2px solid #FFC224;
+    outline-offset: 2px;
 }
