@@ -39,22 +39,22 @@ const Footer = () => {
                         </h2>
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Our values
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Our advisory board
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Our partners
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Work at Future Learn
                                 </Link>
                             </li>
@@ -68,22 +68,22 @@ const Footer = () => {
                         </h2>
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Contact Us
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Become a partner
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Blog
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='list-wrap'>
+                                <Link href='#' className='list-wrap'>
                                     Events
                                 </Link>
                             </li>
