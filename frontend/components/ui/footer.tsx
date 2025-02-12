@@ -10,6 +10,8 @@ import APPLE_STORE from '@/assets/images/apple-store.png';
 import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YouTubeIcon } from './icons/social-icons';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+    
     return (
         <footer>
             <div className='px-4 py-20 md:px-14 bg-color-black'>
@@ -37,22 +39,22 @@ const Footer = () => {
                         </h2>
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Our values
                                 </Link>
                             </li>
-                            <li className='relative mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                            <li className='mb-3'>
+                                <Link href='/' className='list-wrap'>
                                     Our advisory board
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Our partners
                                 </Link>
                             </li>
                             <li>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Work at Future Learn
                                 </Link>
                             </li>
@@ -62,26 +64,26 @@ const Footer = () => {
                     <div className='mb-6 lg:ml-8 md:mb-0'>
                         <h2 className='relative pb-4 mb-5 text-2xl font-semibold text-white'>
                             Our Company
-                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary'></span>
+                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary' />
                         </h2>
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Contact Us
                                 </Link>
                             </li>
-                            <li className='relative mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                            <li className='mb-3'>
+                                <Link href='/' className='list-wrap'>
                                     Become a partner
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Blog
                                 </Link>
                             </li>
                             <li className='mb-3'>
-                                <Link href='/' className='relative list-wrap'>
+                                <Link href='/' className='list-wrap'>
                                     Events
                                 </Link>
                             </li>
@@ -91,7 +93,7 @@ const Footer = () => {
                     <div className='md:ml-16 lg:ml-0'>
                         <h2 className='relative pb-4 mb-5 text-2xl font-semibold text-white'>
                             Get In Touch
-                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary'></span>
+                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary' />
                         </h2>
                         <div className='text-color-gray-1'>
                             <p className='mb-4'>
@@ -153,16 +155,16 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex justify-between py-8 font-medium px-14 bg-color-dark text-color-gray-2'>
+            <div className='flex flex-col gap-2 px-10 py-8 font-medium md:justify-between md:px-14 bg-color-dark text-color-gray-2 md:flex-row'>
                 <div>
-                    <p>© 2010-2024 skillgro.com. All rights reserved.</p>
+                    <p className='text-center'>© 2010-{currentYear} skillgro.com. All rights reserved.</p>
                 </div>
                 <div className='flex gap-3 font-medium'>
-                    <Link href='/' className='relative list-wrap'>
+                    <Link href='/' className='list-wrap'>
                         Term of Use
                     </Link>
                     <p>|</p>
-                    <Link href='/' className='relative list-wrap'>
+                    <Link href='/' className='list-wrap'>
                         Privacy Policy
                     </Link>
                 </div>

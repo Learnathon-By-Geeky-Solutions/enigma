@@ -1,3 +1,7 @@
+.list-wrap {
+    position: relative;
+}
+
 .list-wrap::after {
     content: '';
     position: absolute;
@@ -9,6 +13,12 @@
     transform: scaleX(0);
     transform-origin: top right;
     transition: transform 0.4s cubic-bezier(0.74, 0.72, 0.27, 0.24);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .list-wrap::after {
+        transition: none;
+    }
 }
 
 .list-wrap:hover {
