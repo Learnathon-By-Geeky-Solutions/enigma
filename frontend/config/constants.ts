@@ -1,0 +1,2 @@
+export const LOGO_URL = process.env.NEXT_PUBLIC_LOGO_URL || '/assets/images/logo.png';
+export const SECONDARY_LOGO_URL = process.env.NEXT_PUBLIC_SECONDARY_LOGO_URL || '/assets/images/secondary-logo.png';

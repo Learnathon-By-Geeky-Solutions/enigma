@@ -1,3 +1,5 @@
+import Footer from "@/components/ui/footer";
+import Navbar from "@/components/ui/navbar";
 import { cn } from "@/lib/utils";
 
 interface CommonLayoutProps {
@@ -8,13 +10,11 @@ interface CommonLayoutProps {
 const CommonLayout = ({ children, className }: CommonLayoutProps) => {
     return (
         <div className={cn("flex min-h-screen flex-col", className)}>
-            {/* navbar */}
-            <header>
-                <nav>Navbar</nav>
-            </header>
+            <Navbar />
+
             <main className="flex-grow">{children}</main>
-            {/* footer */}
-            <footer>Footer</footer>
+            
+            <Footer />
         </div>
     );
 };
