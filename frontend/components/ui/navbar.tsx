@@ -11,14 +11,13 @@ import { navLink } from '@/config/navigation';
 
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './sheet';
 import Container from './container';
-
 import Social from './social';
 
 const Navbar = () => {
     const pathname = usePathname();
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 px-4 py-6 text-[#161439] bg-green-100'>
+        <header className='fixed top-0 left-0 right-0 z-50 px-4 py-6 bg-green-100 text-heading-color'>
             <Container>
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>
@@ -32,8 +31,8 @@ const Navbar = () => {
                                     <Link
                                         href={url}
                                         className={`${
-                                            pathname === url ? 'text-[#5751E1]' : ''
-                                        } font-semibold hover:text-[#5751E1]`}
+                                            pathname === url ? 'text-theme-primary' : ''
+                                        } font-semibold hover:text-theme-primary`}
                                     >
                                         {title}
                                     </Link>
@@ -44,7 +43,7 @@ const Navbar = () => {
 
                     <Link
                         href='/login'
-                        className='px-7 py-2 font-semibold rounded-full bg-[#FFC224] hover:text-white hover:bg-[#5751E1] hidden lg:block border border-gray-400'
+                        className='hidden py-2 font-semibold border rounded-full border-border-color-1 px-7 bg-theme-secondary hover:text-white hover:bg-theme-primary lg:block'
                         aria-label='Log in to your account'
                     >
                         Log in
@@ -53,7 +52,7 @@ const Navbar = () => {
                     <div className='flex items-center gap-4 lg:hidden'>
                         <Link
                             href='/login'
-                            className='bg-[#f4f4f4] text-[#6D6C80] hover:bg-[#5751E1] hover:text-white p-2 rounded-full'
+                            className='p-2 rounded-full bg-color-gray text-body-color hover:bg-theme-primary hover:text-white'
                         >
                             <UserRound />
                         </Link>
@@ -61,7 +60,7 @@ const Navbar = () => {
                         {/* Mobile menu */}
                         <Sheet>
                             <SheetTrigger asChild>
-                                <button type='button' className='text-[#5751E1]'>
+                                <button type='button' className='text-theme-primary'>
                                     <LayoutGrid className='size-8' />
                                 </button>
                             </SheetTrigger>
@@ -84,8 +83,8 @@ const Navbar = () => {
                                             <Link
                                                 href={url}
                                                 className={`${
-                                                    pathname === url ? 'text-[#5751E1]' : ''
-                                                } font-medium hover:text-[#5751E1]`}
+                                                    pathname === url ? 'text-theme-primary' : ''
+                                                } font-medium hover:text-theme-primary`}
                                             >
                                                 {title}
                                             </Link>
@@ -96,8 +95,8 @@ const Navbar = () => {
                                 <SheetFooter>
                                     <Social
                                         className='flex justify-between w-full'
-                                        urlClassName='size-10 flex justify-center items-center border rounded text-gray-500 hover:bg-[#5751E1] hover:text-white group'
-                                        iconClassName='fill-white group-hover:fill-[#5751E1]'
+                                        urlClassName='size-10 flex justify-center items-center border rounded text-body-color hover:bg-theme-primary hover:text-white group hover:opacity-80 focus:ring-2'
+                                        iconClassName='fill-white group-hover:fill-theme-primary'
                                     />
                                 </SheetFooter>
                             </SheetContent>

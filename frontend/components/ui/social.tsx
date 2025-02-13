@@ -7,7 +7,7 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YouTubeIcon } f
 
 const Social = ({ className, urlClassName, iconClassName }: SocialProps) => {
     return (
-        <ul className={className}>
+        <ul className={className} aria-label='Social media links'>
             <li>
                 <Link href={FACEBOOK_URL} className={urlClassName}>
                     <FacebookIcon />
