@@ -8,7 +8,6 @@ export const FacebookIcon = () => (
         height='24'
         className='main-grid-item-icon size-5'
         fill='currentColor'
-        role='img'
         aria-labelledby='facebook-title'
     >
         <title id='facebook-title'>facebook</title>
@@ -24,7 +23,6 @@ export const TwitterIcon = () => (
         height='24'
         className='main-grid-item-icon size-5'
         fill='currentColor'
-        role='img'
         aria-labelledby='twitter-title'
     >
         <title id='twitter-title'>twitter</title>
@@ -40,7 +38,6 @@ export const LinkedInIcon = () => (
         height='24'
         className='main-grid-item-icon size-5'
         fill='currentColor'
-        role='img'
         aria-labelledby='linkedin-title'
     >
         <title id='linkedin-title'>linkedin</title>
@@ -62,7 +59,6 @@ export const InstagramIcon = () => (
         strokeLinecap='round'
         strokeLinejoin='round'
         strokeWidth='2'
-        role='img'
         aria-labelledby='instagram-title'
     >
         <title id='instagram-title'>instagram</title>
@@ -81,7 +77,6 @@ export const YouTubeIcon = ({ className }: YouTubeIconProps) => (
         className='main-grid-item-icon size-5'
         fill='currentColor'
         stroke='none'
-        role='img'
         aria-labelledby='youtube-title'
     >
         <title id='youtube-title'>youtube</title>
