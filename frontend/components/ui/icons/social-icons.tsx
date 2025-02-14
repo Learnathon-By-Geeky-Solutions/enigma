@@ -1,4 +1,4 @@
-import { YouTubeIconProps } from '@/types/icons';
+import { YouTubeIconProps } from '@/types/social';
 
 export const FacebookIcon = () => (
     <svg
