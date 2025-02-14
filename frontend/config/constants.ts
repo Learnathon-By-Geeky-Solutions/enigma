@@ -5,3 +5,5 @@ export const TWITTER_URL = process.env.NEXT_PUBLIC_TWITTER_URL || '#';
 export const INSTAGRAM_URL = process.env.NEXT_PUBLIC_INSTAGRAM_URL || '#';
 export const LINKEDIN_URL = process.env.NEXT_PUBLIC_LINKEDIN_URL || '#';
 export const YOUTUBE_URL = process.env.NEXT_PUBLIC_YOUTUBE_URL || '#';
+export const PLAY_STORE_URL = process.env.NEXT_PUBLIC_PLAY_STORE_URL || '#';
+export const APPLE_STORE_URL = process.env.NEXT_PUBLIC_APP_STORE_URL || '#';

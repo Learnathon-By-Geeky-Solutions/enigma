@@ -96,7 +96,7 @@ const Navbar = () => {
                                     <Social
                                         className='flex justify-between w-full'
                                         urlClassName='size-10 flex justify-center items-center border rounded text-body-color hover:bg-theme-primary hover:text-white group hover:opacity-80 focus:ring-2'
-                                        iconClassName='fill-white group-hover:fill-theme-primary'
+                                        youtubePolygonClassName='fill-white group-hover:fill-theme-primary'
                                     />
                                 </SheetFooter>
                             </SheetContent>
