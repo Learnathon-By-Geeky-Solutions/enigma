@@ -5,5 +5,5 @@ export interface YouTubeIconProps {
 export interface SocialProps {
     className: string;
     urlClassName: string;
-    iconClassName: string;
+    youtubePolygonClassName: string;
 };

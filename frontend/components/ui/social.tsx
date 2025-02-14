@@ -5,7 +5,7 @@ import { SocialProps } from '@/types/social';
 
 import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YouTubeIcon } from './icons/social-icons';
 
-const Social = ({ className, urlClassName, iconClassName }: SocialProps) => {
+const Social = ({ className, urlClassName, youtubePolygonClassName }: SocialProps) => {
     return (
         <ul className={className} aria-label='Social media links'>
             <li>
@@ -30,7 +30,7 @@ const Social = ({ className, urlClassName, iconClassName }: SocialProps) => {
             </li>
             <li>
                 <Link href={YOUTUBE_URL} className={urlClassName}>
-                    <YouTubeIcon className={iconClassName} />
+                    <YouTubeIcon className={youtubePolygonClassName} />
                 </Link>
             </li>
         </ul>
