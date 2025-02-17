@@ -1,8 +1,8 @@
 .banner-bg {
     display: flex;
     align-items: flex-end;
-    padding: 60px 0 0;
     position: relative;
+    padding: 60px 0 0;
     overflow: hidden;
 }
 
@@ -106,7 +106,7 @@ img {
 }
 
 .btn:hover {
-    background-color: orange; 
+    background-color: #FFC224; 
     box-shadow: none; 
     color: #212529; 
 }
@@ -231,6 +231,7 @@ img {
 
     .banner-content p {
         margin: 0 auto;
+        max-width: 80%;
     }
 
     .banner-images {
@@ -250,6 +251,13 @@ img {
     .banner-images {
         padding: 0 10px;
         max-width: 100%;
+    }
+
+    .banner-content .title span:not(.svg-icon)>svg {
+        top: 53px;
+        left: -187px;
+        width: 180px;
+        height: 55px;
     }
 
     .banner-images .shape.bg-dots {

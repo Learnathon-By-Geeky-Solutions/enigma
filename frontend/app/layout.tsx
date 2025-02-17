@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body 
-        className={`${lato.className} ${montserrat.className} ${poppins.className} antialiased`}
+        className={[lato.className, montserrat.className, poppins.className, 'antialiased'].join(' ')}
       >
         {children}
       </body>
