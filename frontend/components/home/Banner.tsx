@@ -122,11 +122,11 @@ const Banner = () => {
                     </div>
                     <div className='w-full lg:w-6/12'>
                         <div className='banner-images'>
-                            <Image src={bannerImg} alt='img' className='main-img' />
+                            <Image src={bannerImg} alt='img' className='main-img' priority={true} />
                             <div className='px-4 shape big-shape' data-aos='fade-up-right' data-aos-delay='600'>
                                 <Image src={shape1} alt='shape' className='max-w-full' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(-3.7954px, -12.0103px)' }} />
                             </div>
-                            <Image src={dots} alt='shape' className='shape bg-dots rotateme' />
+                            <Image src={dots} alt='shape' className='shape bg-dots rotateme' priority={true} />
                             <Image src={shape2} alt='shape' className='shape small-shape' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(3.0118px, -10.4327px)' }} />
                             <div className='banner-author'>
                                 <div className='banner-author-item'>
@@ -147,7 +147,7 @@ const Banner = () => {
                     </div>
                 </div>
             </Container>
-            <Image src={shape01} alt='shape' className='line-shape' data-aos='fade-right' data-aos-delay='1600' />
+            <Image src={shape01} alt='shape' className='line-shape' data-aos='fade-right' data-aos-delay='1600' priority={true} />
         </section>
     );
 };
