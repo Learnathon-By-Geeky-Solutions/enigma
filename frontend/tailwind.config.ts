@@ -58,6 +58,7 @@ export default {
                     '1': 'rgba(6, 35, 91, 0.19)',
                 },
                 'color-black': '#06042E',
+                'color-blue': '#050071',
                 'color-dark': '#1C1A4A',
                 'color-gray': {
                     'DEFAULT': '#F4F4F4',
