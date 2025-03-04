@@ -18,6 +18,8 @@ import shape1 from '@/assets/images/banner/banner-shape01.png';
 import shape02 from '@/assets/images/banner/banner-shape02.svg';
 import shape2 from '@/assets/images/banner/banner-shape02.png';
 
+import '@/styles/banner.css';
+
 const Banner = () => {
     useEffect(() => {
         AOS.init();
