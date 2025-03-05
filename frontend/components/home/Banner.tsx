@@ -5,9 +5,6 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import ArrowButton from '../ui/arrow-button';
-import Container from '../ui/container';
-
 import author01 from '@/assets/images/banner/banner-author01.png';
 import author02 from '@/assets/images/banner/banner-author02.png';
 import banner from '@/assets/images/banner/banner-bg.png';
@@ -19,6 +16,9 @@ import shape02 from '@/assets/images/banner/banner-shape02.svg';
 import shape2 from '@/assets/images/banner/banner-shape02.png';
 
 import '@/styles/banner.css';
+
+import ArrowButton from '../ui/arrow-button';
+import Container from '../ui/container';
 
 const Banner = () => {
     useEffect(() => {
@@ -82,16 +82,18 @@ const Banner = () => {
                                         <path
                                             d='M4.74438 7.70565C69.7006 -1.18799 136.097 -2.38304 203.934 4.1205C207.178 4.48495 209.422 7.14626 208.933 10.0534C206.793 23.6481 205.415 36.5704 204.801 48.8204C204.756 51.3291 202.246 53.5582 199.213 53.7955C136.093 59.7623 74.1922 60.5985 13.5091 56.3043C10.5653 56.0924 7.84371 53.7277 7.42158 51.0325C5.20725 38.2627 2.76333 25.6511 0.0898448 13.1978C-0.465589 10.5873 1.61173 8.1379 4.73327 7.70565'
                                             fill='currentcolor'
-                                        ></path>
+                                        />
                                     </svg>
                                     Learning
                                 </span>
                                 <br />
                                 Life <b>Never Stop</b> Teaching
                             </h3>
+                            
                             <p data-aos='fade-right' data-aos-delay='600' className='tracking-tight'>
                                 Every teaching and learning journey is unique. We&apos;ll help guide your way.
                             </p>
+                            
                             <div className='banner-btn-wrap' data-aos='fade-right' data-aos-delay='800'>
                                 <ArrowButton href='/contact' className='btn arrow-btn'>
                                     Start Free Trial
@@ -99,14 +101,19 @@ const Banner = () => {
                             </div>
                         </div>
                     </div>
+                    
                     <div className='w-full lg:w-6/12'>
                         <div className='banner-images'>
                             <Image src={bannerImg} alt='img' className='main-img' priority={true} />
+                            
                             <div className='px-4 shape big-shape' data-aos='fade-up-right' data-aos-delay='600'>
                                 <Image src={shape1} alt='shape' className='max-w-full' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(-3.7954px, -12.0103px)' }} />
                             </div>
+                            
                             <Image src={dots} alt='shape' className='shape bg-dots rotateme' priority={true} />
+                            
                             <Image src={shape2} alt='shape' className='shape small-shape' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(3.0118px, -10.4327px)' }} />
+                            
                             <div className='banner-author'>
                                 <div className='banner-author-item'>
                                     <div className='grow-0 shrink-0 basis-auto'>
@@ -114,18 +121,21 @@ const Banner = () => {
                                     </div>
                                     <h6 className='mb-0 text-sm grow'>Robert Fox</h6>
                                 </div>
+                                
                                 <div className='banner-author-item'>
                                     <div className='grow-0 shrink-0 basis-auto'>
                                         <Image src={author02} alt='author' priority={true} className='max-w-[30px] rounded-full' />
                                     </div>
                                     <h6 className='mb-0 text-sm grow'>Michel Jones</h6>
                                 </div>
+                                
                                 <Image src={shape02} alt='shape' className='absolute top-[9px] left-[calc(100%-11px)] -z-10' />
                             </div>
                         </div>
                     </div>
                 </div>
             </Container>
+            
             <Image src={shape01} alt='shape' className='line-shape' data-aos='fade-right' data-aos-delay='1600' priority={true} />
         </section>
     );

@@ -11,15 +11,20 @@ import star from '@/assets/images/brand-star.svg';
 
 const Partners = () => {
     const brands = [brand01, brand02, brand03, brand04, brand05, brand06, brand02, brand04, brand03, brand05];
-    
+
     return (
         <section className='py-5 bg-color-black'>
             <Marquee pauseOnHover pauseOnClick speed={30}>
                 {brands.map((brand, index) => (
-                    <div key={index} className='flex items-center gap-[35px] mr-[35px]'>
+                    <div key={`partner-${index}`} className='flex items-center gap-9 mr-9'>
                         <figure className='overflow-hidden hover:cursor-pointer'>
-                            <Image src={brand} alt='partner' className='hover:drop-shadow-[0_1000px_0_#B5B4C1] hover:transform hover:translate-y-[-1000px]' />
+                            <Image
+                                src={brand}
+                                alt={`partner brand ${index + 1}`}
+                                className='hover:drop-shadow-[0_1000px_0_#B5B4C1] hover:transform hover:translate-y-[-1000px]'
+                            />
                         </figure>
+                        
                         <figure>
                             <Image src={star} alt='icon' />
                         </figure>
