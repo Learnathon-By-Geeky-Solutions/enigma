@@ -2,10 +2,10 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import ArrowButton from '../ui/arrow-button';
 import Container from '../ui/container';
 
 import author01 from '@/assets/images/banner/banner-author01.png';
@@ -53,21 +53,21 @@ const Banner = () => {
                                                 strokeWidth='3.07158'
                                                 strokeLinejoin='round'
                                                 style={{ strokeDasharray: '32, 34', strokeDashoffset: 0 }}
-                                            ></path>
+                                            />
                                             <path
                                                 d='M27.4487 52.5191C33.5478 49.598 47.4807 42.3448 54.4199 36.7009'
                                                 stroke='#031333'
                                                 strokeWidth='3.07158'
                                                 strokeLinejoin='round'
                                                 style={{ strokeDasharray: '32, 34', strokeDashoffset: 0 }}
-                                            ></path>
+                                            />
                                             <path
                                                 d='M20.1039 44.2553C23.1559 40.986 29.8591 33.2239 32.2559 28.3291'
                                                 stroke='#031333'
                                                 strokeWidth='3.07158'
                                                 strokeLinejoin='round'
                                                 style={{ strokeDasharray: '21, 23', strokeDashoffset: 0 }}
-                                            ></path>
+                                            />
                                         </svg>
                                     </span>
                                     <svg
@@ -93,32 +93,9 @@ const Banner = () => {
                                 Every teaching and learning journey is unique. We&apos;ll help guide your way.
                             </p>
                             <div className='banner-btn-wrap' data-aos='fade-right' data-aos-delay='800'>
-                                <Link href='/contact' className='btn arrow-btn'>
-                                    Start Free Trial{' '}
-                                    <svg
-                                        width='16'
-                                        height='14'
-                                        viewBox='0 0 16 14'
-                                        fill='none'
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        aria-label='arrow-right'
-                                    >
-                                        <path
-                                            d='M1 7L15 7M15 7L9 1M15 7L9 13'
-                                            stroke='currentcolor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        ></path>
-                                        <path
-                                            d='M1 7L15 7M15 7L9 1M15 7L9 13'
-                                            stroke='currentcolor'
-                                            strokeWidth='2'
-                                            strokeLinecap='round'
-                                            strokeLinejoin='round'
-                                        ></path>
-                                    </svg>
-                                </Link>
+                                <ArrowButton href='/contact' className='btn arrow-btn'>
+                                    Start Free Trial
+                                </ArrowButton>
                             </div>
                         </div>
                     </div>

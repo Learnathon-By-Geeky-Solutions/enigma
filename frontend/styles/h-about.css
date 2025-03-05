@@ -12,8 +12,7 @@
 }
 
 .alltuchtopdown {
-    animation: alltuchtopdown 1.5s ease-in-out 0s infinite alternate;
-    animation-duration: 3s;
+    animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
 }
 
 .about-images .popup-video {

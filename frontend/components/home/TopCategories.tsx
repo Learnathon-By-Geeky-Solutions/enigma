@@ -9,7 +9,7 @@ const TopCategories = () => {
                         <div className='mb-10 text-center'>
                             <span className='bg-color-gray-3 py-1 px-4 font-medium rounded-full mb-3.5 text-theme-primary leading-[1.62] inline-block'>Trending Categories</span>
                             <h2 className='text-3xl sm:text-4xl font-bold capitalize text-heading-color tracking-[-.75px]'>Top Category We Have</h2>
-                            <p className='mt-2.5 text-body-color'>when known printer took a galley of type scrambl edmake</p>
+                            <p className='mt-2.5 text-body-color'>Explore our curated selection of top categories to find exactly what you need.</p>
                         </div>
                     </div>
                 </div>
