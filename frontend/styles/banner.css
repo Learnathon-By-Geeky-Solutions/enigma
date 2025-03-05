@@ -204,11 +204,15 @@ img {
         max-width: 100%;
     }
 
+    .banner-content .title {
+        font-size: 30px;
+    }
+
     .banner-content .title span:not(.svg-icon)>svg {
-        top: 53px;
-        left: -187px;
-        width: 180px;
-        height: 55px;
+        top: 0;
+        left: 10px;
+        width: 160px;
+        height: 45px;
     }
 
     .banner-images .shape.bg-dots {

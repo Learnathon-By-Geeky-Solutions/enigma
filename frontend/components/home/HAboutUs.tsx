@@ -47,13 +47,13 @@ const HAboutUs = () => {
                                     </DialogHeader>
                                     
                                     <iframe
-                                        src='http://youtube.com/embed/zpOULjyy-n8?rel=0'
+                                        src='https://youtube.com/embed/zpOULjyy-n8?rel=0'
                                         title='youtube video'
                                         className='w-full h-48 md:h-52 lg:h-56 xl:h-60'
                                         frameBorder='0'
                                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                                         allowFullScreen
-                                    ></iframe>
+                                    />
                                 </DialogContent>
                             </Dialog>
                             
@@ -71,7 +71,7 @@ const HAboutUs = () => {
                             <div className='section-title'>
                                 <span className='sub-title'>Get More About Us</span>
                                 <h2 className='title'>
-                                    Thousand Of Top{''}
+                                    Thousand Of Top
                                     <span className='relative mx-2'>
                                         <svg
                                             x='0px'
@@ -80,7 +80,10 @@ const HAboutUs = () => {
                                             viewBox='0 0 209 59'
                                             fill='none'
                                             xmlns='http://www.w3.org/2000/svg'
+                                            role='img'
+                                            aria-label='decorative underline'
                                         >
+                                            <title>decorative underline</title>
                                             <path
                                                 d='M4.74438 7.70565C69.7006 -1.18799 136.097 -2.38304 203.934 4.1205C207.178 4.48495 209.422 7.14626 208.933 10.0534C206.793 23.6481 205.415 36.5704 204.801 48.8204C204.756 51.3291 202.246 53.5582 199.213 53.7955C136.093 59.7623 74.1922 60.5985 13.5091 56.3043C10.5653 56.0924 7.84371 53.7277 7.42158 51.0325C5.20725 38.2627 2.76333 25.6511 0.0898448 13.1978C-0.465589 10.5873 1.61173 8.1379 4.73327 7.70565'
                                                 fill='currentcolor'
@@ -119,10 +122,20 @@ const HAboutUs = () => {
                                 </li>
                             </ul>
                             
-                            <div className='btn-wrap' data-aos='fade-left' data-aos-delay='200'>
-                                <ArrowButton href='/about-us' className='btn arrow-btn'>
-                                    Start Free Trial
-                                </ArrowButton>
+                            <div className='lg:hidden'>
+                                <div className='btn-wrap' data-aos='fade-right' data-aos-delay='200'>
+                                    <ArrowButton href='/about-us' className='btn arrow-btn'>
+                                        Start Free Trial
+                                    </ArrowButton>
+                                </div>
+                            </div>
+                            
+                            <div className='hidden overflow-hidden lg:block'>
+                                <div className='btn-wrap' data-aos='fade-left' data-aos-delay='200'>
+                                    <ArrowButton href='/about-us' className='btn arrow-btn'>
+                                        Start Free Trial
+                                    </ArrowButton>
+                                </div>
                             </div>
                         </div>
                     </div>

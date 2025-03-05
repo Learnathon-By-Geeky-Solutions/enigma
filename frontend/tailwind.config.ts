@@ -66,6 +66,7 @@ export default {
                     '2': '#8C9AB4',
                     '3': '#EFEEFE',
                     '4': '#F7F7F9',
+                    '5': '#E6EAEF'
                 },
             },
             borderRadius: {

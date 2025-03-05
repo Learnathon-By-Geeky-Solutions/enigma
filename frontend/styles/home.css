@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     letter-spacing: 0;
     line-height: 1.12;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding: 16px 30px;
     text-align: center;
     text-transform: capitalize;
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .arrow-btn:hover svg {
     color: var(--color-text-dark); 
-    transform: translateX(3); 
+    transform: translateX(3px); 
     transform-origin: left center; 
 }
 
@@ -69,7 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 1199.98px) {
-    /* Styles for large screens will be added here */
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+        box-shadow: 3px 5px 0 0 var(--color-blue);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -77,5 +81,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767.98px) {
-    /* Styles for small screens will be added here */
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        box-shadow: 2px 4px 0 0 var(--color-blue);
+    }
 }

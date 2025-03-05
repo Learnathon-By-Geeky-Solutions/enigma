@@ -1,8 +1,9 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import { LayoutGrid, UserRound } from 'lucide-react';
 
@@ -15,9 +16,26 @@ import Social from './social';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [hasShadow, setHasShadow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 44) {
+                setHasShadow(true);
+            } else {
+                setHasShadow(false);
+            }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 px-4 bg-white py-7 text-heading-color shadow-[0_10px_15px_rgba(25,25,25,0.1)]'>
+        <header className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-6 text-heading-color transition-shadow duration-300 ${hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'}`}>
             <Container>
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>
