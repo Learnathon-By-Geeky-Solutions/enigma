@@ -133,7 +133,7 @@ const HAboutUs = () => {
                             <div className='hidden overflow-hidden lg:block'>
                                 <div className='btn-wrap' data-aos='fade-left' data-aos-delay='200'>
                                     <ArrowButton href='/about-us' className='btn arrow-btn'>
-                                        Start Free Trial
+                                        Get More About Us
                                     </ArrowButton>
                                 </div>
                             </div>

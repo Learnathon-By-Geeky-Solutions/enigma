@@ -17,15 +17,29 @@ import Social from './social';
 const Navbar = () => {
     const pathname = usePathname();
     const [hasShadow, setHasShadow] = useState(false);
+    const SCROLL_THRESHOLD = 44;
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 44) {
+        // Throttle function to limit execution frequency
+        const throttle = (func: (...args: unknown[]) => void, limit: number): (...args: unknown[]) => void => {
+            let inThrottle: boolean;
+
+            return function(this: unknown, ...args: unknown[]) {
+                if (!inThrottle) {
+                    func.apply(this, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        };
+        
+        const handleScroll = throttle(() => {
+            if (window.scrollY > SCROLL_THRESHOLD) {
                 setHasShadow(true);
             } else {
                 setHasShadow(false);
             }
-        };
+        }, 100);
     
         window.addEventListener('scroll', handleScroll);
     

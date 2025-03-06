@@ -1,30 +1,50 @@
 :root {
-    --color-primary: #5751E1;
-    --color-secondary: #FFC224;
-    --color-text-heading: #161439;
-    --color-text-body: #6D6C80;
-    --color-text-dark: #212529;
+    --theme-primary: #5751e1;
+    --theme-secondary: #ffc224;
+    --text-body-color: #6d6c80;
+    --text-heading-color: #161439;
+    --color-black: #06042e;
+    --color-black-1: #212529;
+    --color-black-2: #141109;
     --color-blue: #050071;
-    --color-gray: #EFEEFE;
-    --color-red: #E11B24;
-    --color-white: #FFFFFF;
+    --color-blue-1: #433ec2;
+    --color-blue-2: #4a44d1;
+    --color-gray: #f4f4f4;
+    --color-gray-1: #b2bbcc;
+    --color-gray-2: #8c9ab4;
+    --color-gray-3: #efeefe;
+    --color-gray-4: #f7f7f9;
+    --color-gray-5: #e6eaef;
+    --color-red: #e11b24;
+    --color-white: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
+}
+
+.alltuchtopdown {
+    -webkit-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
+    -moz-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
+    animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
 }
 
 .arrow-btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    transition: .3s linear;
+    transition: 0.3s linear;
     overflow: hidden;
 }
 
 .btn {
     user-select: none;
-    background: var(--color-primary) none repeat scroll 0 0;
+    background: var(--theme-primary) none repeat scroll 0 0;
     border: medium none;
     color: var(--color-white);
     cursor: pointer;
@@ -42,26 +62,26 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     box-shadow: 4px 6px 0 0 var(--color-blue);
     overflow: hidden;
-    transition: background-color .3s, box-shadow .3s, color .3s; 
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
 .btn:hover {
-    background-color: var(--color-secondary); 
-    box-shadow: none; 
-    color: var(--color-text-dark); 
+    background-color: var(--theme-secondary);
+    box-shadow: none;
+    color: var(--color-black-1);
 }
 
 .arrow-btn svg {
     color: var(--color-white);
     width: 15px;
-    transition: all .3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
     transform: translateY(-1px);
 }
 
 .arrow-btn:hover svg {
-    color: var(--color-text-dark); 
-    transform: translateX(3px); 
-    transform-origin: left center; 
+    color: var(--color-black-1);
+    transform: translateX(3px);
+    transform-origin: left center;
 }
 
 @media (max-width: 1500px) {
@@ -85,5 +105,17 @@ h1, h2, h3, h4, h5, h6 {
         padding: 10px 20px;
         font-size: 14px;
         box-shadow: 2px 4px 0 0 var(--color-blue);
+    }
+}
+
+@keyframes alltuchtopdown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

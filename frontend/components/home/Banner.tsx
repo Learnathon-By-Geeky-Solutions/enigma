@@ -18,6 +18,7 @@ import shape2 from '@/assets/images/banner/banner-shape02.png';
 import '@/styles/banner.css';
 
 import ArrowButton from '../ui/arrow-button';
+import AuthorAvatar from '../ui/author-avatar';
 import Container from '../ui/container';
 
 const Banner = () => {
@@ -111,28 +112,16 @@ const Banner = () => {
                             <Image src={bannerImg} alt='img' className='main-img' priority={true} />
                             
                             <div className='px-4 shape big-shape' data-aos='fade-up-right' data-aos-delay='600'>
-                                <Image src={shape1} alt='shape' className='max-w-full' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(-3.7954px, -12.0103px)' }} />
+                                <Image src={shape1} alt='shape' className='max-w-full shape-transform-1' />
                             </div>
                             
                             <Image src={dots} alt='shape' className='shape bg-dots rotateme' priority={true} />
                             
-                            <Image src={shape2} alt='shape' className='shape small-shape' style={{ translate: 'none', rotate: 'none', scale: 'none', transform: 'translate(3.0118px, -10.4327px)' }} />
+                            <Image src={shape2} alt='shape' className='shape small-shape shape-transform-2' />
                             
                             <div className='banner-author'>
-                                <div className='banner-author-item'>
-                                    <div className='grow-0 shrink-0 basis-auto'>
-                                        <Image src={author01} alt='author' priority={true} className='max-w-[30px] rounded-full' />
-                                    </div>
-                                    <h6 className='mb-0 text-sm grow'>Robert Fox</h6>
-                                </div>
-                                
-                                <div className='banner-author-item'>
-                                    <div className='grow-0 shrink-0 basis-auto'>
-                                        <Image src={author02} alt='author' priority={true} className='max-w-[30px] rounded-full' />
-                                    </div>
-                                    <h6 className='mb-0 text-sm grow'>Michel Jones</h6>
-                                </div>
-                                
+                                <AuthorAvatar imageSrc={author01} name='Robert Fox' />
+                                <AuthorAvatar imageSrc={author02} name='Michel Jones' />
                                 <Image src={shape02} alt='shape' className='absolute top-[9px] left-[calc(100%-11px)] -z-10' />
                             </div>
                         </div>
