@@ -42,7 +42,7 @@ const Newsletter = () => {
                                 {' '}about
                                 <br />
                                 new{' '}
-                                <span>courses & study?</span>? 
+                                <span>courses & study?</span> 
                             </h2>
                             <div className='newsletter-form'>
                                 <form>
