@@ -60,6 +60,11 @@
     color: var(--color-black-1);
 }
 
+.btn:focus {
+    outline: 2px solid var(--theme-primary);
+    outline-offset: 2px;
+}
+
 .arrow-btn svg {
     color: var(--color-white);
     width: 15px;

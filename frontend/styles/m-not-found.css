@@ -9,6 +9,12 @@
     margin: 0px auto 65px;
 }
 
+.error-img svg {
+    width: 100%;
+    height: 100%;
+    color: var(--theme-secondary);
+}
+
 .error-content {
     text-align: center;
 }
@@ -54,7 +60,7 @@
     .error-img {
         margin-bottom: 30px;
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .error-content .title {
