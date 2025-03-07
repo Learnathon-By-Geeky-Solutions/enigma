@@ -1,8 +1,9 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 import { LayoutGrid, UserRound } from 'lucide-react';
 
@@ -15,9 +16,40 @@ import Social from './social';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [hasShadow, setHasShadow] = useState(false);
+    const SCROLL_THRESHOLD = 44;
+
+    useEffect(() => {
+        // Throttle function to limit execution frequency
+        const throttle = (func: (...args: unknown[]) => void, limit: number): (...args: unknown[]) => void => {
+            let inThrottle: boolean;
+
+            return function(this: unknown, ...args: unknown[]) {
+                if (!inThrottle) {
+                    func.apply(this, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        };
+        
+        const handleScroll = throttle(() => {
+            if (window.scrollY > SCROLL_THRESHOLD) {
+                setHasShadow(true);
+            } else {
+                setHasShadow(false);
+            }
+        }, 100);
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 px-4 py-6 bg-green-100 text-heading-color'>
+        <header className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-6 text-heading-color transition-shadow duration-300 ${hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'}`}>
             <Container>
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>

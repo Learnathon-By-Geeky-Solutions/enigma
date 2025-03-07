@@ -1,8 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-const Container = ({ children }: { children: ReactNode }) => {
+import { cn } from '@/lib/utils';
+
+const Container = ({ children, className }: { children: ReactNode; className?: string }) => {
     return (
-        <div className="max-w-7xl mx-auto">{children}</div>
+        <div className={cn('mx-auto max-w-7xl', className)}>{children}</div>
     );
 };
 
