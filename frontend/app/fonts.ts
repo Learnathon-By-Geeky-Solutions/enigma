@@ -18,7 +18,7 @@ export const montserrat = Montserrat({
 });
 
 export const poppins = Poppins({
-    weight: ['400', '500', '600'],
+    weight: ['400', '500', '600', '700'],
     subsets: ['latin'],
     display: 'swap',
 });

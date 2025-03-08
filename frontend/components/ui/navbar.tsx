@@ -49,7 +49,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-6 text-heading-color transition-shadow duration-300 ${hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'}`}>
+        <header className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-5 md:py-6 text-heading-color transition-shadow duration-300 ${hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'}`}>
             <Container>
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>
@@ -64,7 +64,7 @@ const Navbar = () => {
                                         href={url}
                                         className={`${
                                             pathname === url ? 'text-theme-primary' : ''
-                                        } font-semibold hover:text-theme-primary`}
+                                        } font-medium hover:text-theme-primary`}
                                     >
                                         {title}
                                     </Link>
