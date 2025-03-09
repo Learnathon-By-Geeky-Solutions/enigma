@@ -6,9 +6,9 @@ import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import aboutImg from '@/assets/images/about-img.png';
-import aboutShape from '@/assets/images/about-shape.svg';
-import studentGrp from '@/assets/images/student-grp.png';
+import aboutImg from '@/assets/images/others/about-img.png';
+import aboutShape from '@/assets/images/others/about-shape.svg';
+import studentGrp from '@/assets/images/others/student-grp.png';
 
 import '@/styles/h-about.css';
 

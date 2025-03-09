@@ -1,9 +1,9 @@
 import Banner from '@/components/home/Banner';
+import Faq from '@/components/home/Faq';
 import HAboutUs from '@/components/home/HAboutUs';
 import TopCategories from '@/components/home/TopCategories';
 import Newsletter from '@/components/shared/Newsletter';
 import Partners from '@/components/shared/Partners';
-import Container from '@/components/ui/container';
 
 import '@/styles/home.css';
 
@@ -20,12 +20,8 @@ export default function Home() {
       <Partners />
       <HAboutUs />
       <Newsletter />
-      <Container>
-        {/* our partner */}
-        {/* feature job types */}
-        {/* out mission */}
-        Hello Everyone
-      </Container>
+      <Faq />
+      {/* latest blogs */}
     </>
   );
 }
