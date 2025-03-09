@@ -7,7 +7,7 @@ import brand03 from '@/assets/images/partners/brand03.png';
 import brand04 from '@/assets/images/partners/brand04.png';
 import brand05 from '@/assets/images/partners/brand05.png';
 import brand06 from '@/assets/images/partners/brand06.png';
-import star from '@/assets/images/brand-star.svg';
+import star from '@/assets/images/icons/brand-star.svg';
 
 const Partners = () => {
     const brands = [brand01, brand02, brand03, brand04, brand05, brand06, brand02, brand04, brand03, brand05];
