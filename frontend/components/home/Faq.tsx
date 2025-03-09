@@ -9,6 +9,53 @@ import Image from 'next/image';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 
 const Faq = () => {
+    const letters = [
+        { text: '*', rotation: -81.6509, translation: -0.319688 },
+        { text: ' ', rotation: -78.9206, translation: -0.264062 },
+        { text: 'E', rotation: -75.5398, translation: -0.45875 },
+        { text: 'D', rotation: -71.1198, translation: -0.48625 },
+        { text: 'U', rotation: -66.5713, translation: -0.48625 },
+        { text: 'C', rotation: -62.0227, translation: -0.48625 },
+        { text: 'A', rotation: -57.5603, translation: -0.467812 },
+        { text: 'T', rotation: -53.4459, translation: -0.411875 },
+        { text: 'I', rotation: -50.2844, translation: -0.264062 },
+        { text: 'O', rotation: -46.6449, translation: -0.514062 },
+        { text: 'N', rotation: -41.9662, translation: -0.48625 },
+        { text: ' ', rotation: -38.4569, translation: -0.264062 },
+        { text: '*', rotation: -35.7266, translation: -0.319688 },
+        { text: ' ', rotation: -32.9962, translation: -0.264062 },
+        { text: 'S', rotation: -29.6155, translation: -0.45875 },
+        { text: 'Y', rotation: -25.3242, translation: -0.45875 },
+        { text: 'S', rotation: -21.0328, translation: -0.45875 },
+        { text: 'T', rotation: -16.873, translation: -0.430625 },
+        { text: 'E', rotation: -12.7132, translation: -0.45875 },
+        { text: 'M', rotation: -8.03456, translation: -0.541563 },
+        { text: ' ', rotation: -4.26649, translation: -0.264062 },
+        { text: '*', rotation: -1.53617, translation: -0.319688 },
+        { text: ' ', rotation: 1.19415, translation: -0.264062 },
+        { text: 'C', rotation: 4.70352, translation: -0.48625 },
+        { text: 'A', rotation: 9.2521, translation: -0.48625 },
+        { text: 'N', rotation: 13.8007, translation: -0.48625 },
+        { text: ' ', rotation: 17.31, translation: -0.264062 },
+        { text: '*', rotation: 20.0404, translation: -0.319688 },
+        { text: ' ', rotation: 22.7707, translation: -0.264062 },
+        { text: 'M', rotation: 26.5388, translation: -0.541563 },
+        { text: 'A', rotation: 31.3461, translation: -0.48625 },
+        { text: 'K', rotation: 35.8946, translation: -0.48625 },
+        { text: 'E', rotation: 40.3146, translation: -0.45875 },
+        { text: ' ', rotation: 43.6953, translation: -0.264062 },
+        { text: '*', rotation: 46.4257, translation: -0.319688 },
+        { text: ' ', rotation: 49.156, translation: -0.264062 },
+        { text: 'C', rotation: 52.6653, translation: -0.48625 },
+        { text: 'H', rotation: 57.2139, translation: -0.48625 },
+        { text: 'A', rotation: 61.7625, translation: -0.48625 },
+        { text: 'N', rotation: 66.3111, translation: -0.48625 },
+        { text: 'G', rotation: 70.9898, translation: -0.514062 },
+        { text: 'E', rotation: 75.5398, translation: -0.45875 },
+        { text: ' ', rotation: 78.9206, translation: -0.264062 },
+        { text: '*', rotation: 81.6509, translation: -0.319688 },
+    ];
+
     return (
         <section className='faq-area'>
             <Container>
@@ -21,490 +68,20 @@ const Faq = () => {
                                         aria-label='* EDUCATION * SYSTEM * CAN * MAKE * CHANGE *'
                                         style={{ position: 'relative', height: '12.5381em' }}
                                     >
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(-81.6509deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(-78.9206deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(-75.5398deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            E
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(-71.1198deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            D
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(-66.5713deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            U
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(-62.0227deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            C
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.467812em) rotate(-57.5603deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            A
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.411875em) rotate(-53.4459deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            T
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(-50.2844deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            I
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.514062em) rotate(-46.6449deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            O
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(-41.9662deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            N
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(-38.4569deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(-35.7266deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(-32.9962deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(-29.6155deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            S
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(-25.3242deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            Y
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(-21.0328deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            S
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.430625em) rotate(-16.873deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            T
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(-12.7132deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            E
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.541563em) rotate(-8.03456deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            M
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(-4.26649deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(-1.53617deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(1.19415deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(4.70352deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            C
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(9.2521deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            A
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(13.8007deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            N
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(17.31deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(20.0404deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(22.7707deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.541563em) rotate(26.5388deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            M
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(31.3461deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            A
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(35.8946deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            K
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(40.3146deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            E
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(43.6953deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(46.4257deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(49.156deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(52.6653deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            C
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(57.2139deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            H
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(61.7625deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            A
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.48625em) rotate(66.3111deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            N
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.514062em) rotate(70.9898deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            G
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.45875em) rotate(75.5398deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            E
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.264062em) rotate(78.9206deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            &nbsp;
-                                        </span>
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: 'auto',
-                                                left: '50%',
-                                                transform: 'translateX(-0.319688em) rotate(81.6509deg)',
-                                                transformOrigin: 'center 14em',
-                                            }}
-                                        >
-                                            *
-                                        </span>
+                                        {letters.map((letter, index) => (
+                                            <span
+                                                key={index}
+                                                style={{
+                                                    position: 'absolute',
+                                                    bottom: 'auto',
+                                                    left: '50%',
+                                                    transform: `translateX(${letter.translation}em) rotate(${letter.rotation}deg)`,
+                                                    transformOrigin: 'center 14em',
+                                                }}
+                                            >
+                                                {letter.text}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -517,8 +94,10 @@ const Faq = () => {
                                         viewBox='0 0 243 201'
                                         fill='none'
                                         xmlns='http://www.w3.org/2000/svg'
-                                        className='injectable injectable tg-motion-effects4'
+                                        role='img'
+                                        aria-label='decorative-shape'
                                     >
+                                        <title>decorative-shape</title>
                                         <path
                                             fillRule='evenodd'
                                             clipRule='evenodd'
@@ -550,7 +129,10 @@ const Faq = () => {
                                             viewBox='0 0 54 66'
                                             fill='none'
                                             xmlns='http://www.w3.org/2000/svg'
+                                            role='img'
+                                            aria-label='learning-curve'
                                         >
+                                            <title>learning-curve</title>
                                             <path
                                                 d='M3.76256 36.4136C7.34334 29.8191 15.1459 14.2331 17.71 4.64484'
                                                 stroke='#031333'
@@ -597,25 +179,33 @@ const Faq = () => {
                                     <AccordionItem value='item-1'>
                                         <AccordionTrigger>What’s SkillGro Want to give you?</AccordionTrigger>
                                         <AccordionContent>
-                                            Groove’s intuitive shared inbox makes it easy for team members organize prioritize and.In this episode.urvived not only five centuries.Edhen an unknown printer took a galley of type and scrambl
+                                            Groove’s intuitive shared inbox makes it easy for team members organize
+                                            prioritize and.In this episode.urvived not only five centuries.Edhen an
+                                            unknown printer took a galley of type and scrambl
                                         </AccordionContent>
                                     </AccordionItem>
                                     <AccordionItem value='item-2'>
                                         <AccordionTrigger>Why choose us for your education?</AccordionTrigger>
                                         <AccordionContent>
-                                            Groove’s intuitive shared inbox makes it easy for team members organize prioritize and.In this episode.urvived not only five centuries.Edhen an unknown printer took a galley of type and scrambl
+                                            Groove’s intuitive shared inbox makes it easy for team members organize
+                                            prioritize and.In this episode.urvived not only five centuries.Edhen an
+                                            unknown printer took a galley of type and scrambl
                                         </AccordionContent>
                                     </AccordionItem>
                                     <AccordionItem value='item-3'>
                                         <AccordionTrigger>How We Provide Service For you?</AccordionTrigger>
                                         <AccordionContent>
-                                            Groove’s intuitive shared inbox makes it easy for team members organize prioritize and.In this episode.urvived not only five centuries.Edhen an unknown printer took a galley of type and scrambl
+                                            Groove’s intuitive shared inbox makes it easy for team members organize
+                                            prioritize and.In this episode.urvived not only five centuries.Edhen an
+                                            unknown printer took a galley of type and scrambl
                                         </AccordionContent>
                                     </AccordionItem>
                                     <AccordionItem value='item-4'>
                                         <AccordionTrigger>Are you Affordable For Your Course</AccordionTrigger>
                                         <AccordionContent>
-                                            Groove’s intuitive shared inbox makes it easy for team members organize prioritize and.In this episode.urvived not only five centuries.Edhen an unknown printer took a galley of type and scrambl
+                                            Groove’s intuitive shared inbox makes it easy for team members organize
+                                            prioritize and.In this episode.urvived not only five centuries.Edhen an
+                                            unknown printer took a galley of type and scrambl
                                         </AccordionContent>
                                     </AccordionItem>
                                 </Accordion>
