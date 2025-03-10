@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, TWITTER_URL, YOUTUBE_URL } from '@/config/constants';
 import { SocialProps } from '@/types/social';
 
-import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon, YouTubeIcon } from './icons/social-icons';
+import FacebookIcon from './icons/facebook-icon';
+import InstagramIcon from './icons/instagram-icon';
+import LinkedInIcon from './icons/linkedin-icon';
+import TwitterIcon from './icons/twitter-icon';
+import YouTubeIcon from './icons/youtube-icon';
 
 const Social = ({ className, urlClassName, youtubePolygonClassName }: SocialProps) => {
     return (

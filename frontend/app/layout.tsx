@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { lato, montserrat } from "./fonts";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { lato, montserrat, poppins } from './fonts';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "AI-Powered Online Job Preparation Platform",
+  title: 'Create Next App',
+  description: 'AI-Powered Online Job Preparation Platform',
 };
 
 export default function RootLayout({
@@ -13,9 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${lato.className} ${montserrat.className} antialiased`}
+    <html lang='en'>
+      <body 
+        className={[lato.className, montserrat.className, poppins.className, 'antialiased'].join(' ')}
       >
         {children}
       </body>

@@ -57,12 +57,24 @@ export default {
                 'border-color': {
                     '1': 'rgba(6, 35, 91, 0.19)',
                 },
-                'color-black': '#06042E',
+                'color-black': {
+                    'DEFAULT': '#06042E',
+                    '1': '#212529',
+                    '2': '#141109',
+                },
+                'color-blue': {
+                    'DEFAULT': '#050071',
+                    '1': '#433EC2',
+                    '2': '#4A44D1',
+                },
                 'color-dark': '#1C1A4A',
                 'color-gray': {
                     'DEFAULT': '#F4F4F4',
                     '1': '#B2BBCC',
                     '2': '#8C9AB4',
+                    '3': '#EFEEFE',
+                    '4': '#F7F7F9',
+                    '5': '#E6EAEF'
                 },
             },
             borderRadius: {
