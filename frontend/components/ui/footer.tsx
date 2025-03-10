@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 import { APPLE_STORE_URL, PLAY_STORE_URL } from '@/config/constants';
 
-import Social from './social';
-
 import '@/styles/footer.css';
 
-import SECONDARY_LOGO from '@/assets/images/secondary-logo.png';
-import GOOGLE_PLAY from '@/assets/images/google-play.png';
-import APPLE_STORE from '@/assets/images/apple-store.png';
+import APPLE_STORE from '@/assets/images/others/apple-store.png';
+import GOOGLE_PLAY from '@/assets/images/others/google-play.png';
+import SECONDARY_LOGO from '@/assets/images/logo/secondary-logo.png';
+
+import Social from './social';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
