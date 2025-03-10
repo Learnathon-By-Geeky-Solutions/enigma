@@ -3,6 +3,8 @@ const DecorativeUnderline = () => {
         <svg
             x='0px'
             y='0px'
+            width='100%'
+            height='100%'
             preserveAspectRatio='none'
             viewBox='0 0 209 59'
             fill='none'

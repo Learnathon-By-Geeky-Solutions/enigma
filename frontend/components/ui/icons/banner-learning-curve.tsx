@@ -8,7 +8,7 @@ const BannerLearningCurve = () => {
             xmlns='http://www.w3.org/2000/svg'
             aria-labelledby='banner-learning-curve'
         >
-            <title title='banner-learning-curve'>banner learning curve</title>
+            <title id='banner-learning-curve'>banner learning curve</title>
             <path
                 d='M10.9456 42.4604C12.35 35.8453 15.0985 20.3798 14.8574 11.4385'
                 stroke='#031333'

@@ -49,6 +49,18 @@
     position: absolute;
 }
 
+.circular-text-container {
+    position: relative;
+    height: 12.5381em;
+}
+
+.circular-text-letter {
+    position: absolute;
+    bottom: auto;
+    left: 50%;
+    transform-origin: center 14em;
+}
+
 .faq-img {
     position: relative;
     z-index: 1;
