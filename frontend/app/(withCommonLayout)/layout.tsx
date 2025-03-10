@@ -1,19 +1,13 @@
-import Footer from "@/components/ui/footer";
-import Navbar from "@/components/ui/navbar";
-import { cn } from "@/lib/utils";
+import Footer from '@/components/ui/footer';
+import Navbar from '@/components/ui/navbar';
+import TopNav from '@/components/ui/topnav';
 
-interface CommonLayoutProps {
-    children: React.ReactNode;
-    className?: string;
-};
-
-const CommonLayout = ({ children, className }: CommonLayoutProps) => {
+const CommonLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className={cn("flex min-h-screen flex-col", className)}>
+        <div className='flex flex-col min-h-screen'>
+            <TopNav />
             <Navbar />
-
-            <main className="flex-grow">{children}</main>
-            
+            <main className='flex-grow'>{children}</main>
             <Footer />
         </div>
     );
