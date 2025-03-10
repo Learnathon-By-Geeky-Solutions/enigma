@@ -71,7 +71,7 @@ const Footer = () => {
 
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
-                                <Link href='#' className='list-wrap'>
+                                <Link href='/contact-us' className='list-wrap'>
                                     Contact Us
                                 </Link>
                             </li>

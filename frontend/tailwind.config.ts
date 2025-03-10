@@ -74,6 +74,7 @@ export default {
     				'3': '#EFEEFE',
     				'4': '#F7F7F9',
     				'5': '#E6EAEF',
+					'6': '#7F7E97',
     				DEFAULT: '#F4F4F4'
     			}
     		},
