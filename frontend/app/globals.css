@@ -20,6 +20,7 @@
     --color-gray-3: #efeefe;
     --color-gray-4: #f7f7f9;
     --color-gray-5: #e6eaef;
+    --color-gray-6: #7f7e97;
     --color-red: #e11b24;
     --color-yellow: #f8bc24;
     --color-yellow-1: #fbe67b;
@@ -79,4 +80,22 @@
     color: var(--color-black-1);
     transform: translateX(3px);
     transform-origin: left center;
+}
+
+.alltuchtopdown {
+    -webkit-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
+    -moz-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
+    animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
+}
+
+@keyframes alltuchtopdown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

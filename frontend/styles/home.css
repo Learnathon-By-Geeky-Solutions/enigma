@@ -7,12 +7,6 @@ h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-.alltuchtopdown {
-    -webkit-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
-    -moz-animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
-    animation: alltuchtopdown 3s ease-in-out 0s infinite alternate;
-}
-
 @media (max-width: 1500px) {
     /* Styles for extra large screens will be added here */
 }
@@ -27,16 +21,4 @@ h6 {
 
 @media (max-width: 767.98px) {
     /* Styles for small screens will be added here */
-}
-
-@keyframes alltuchtopdown {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
