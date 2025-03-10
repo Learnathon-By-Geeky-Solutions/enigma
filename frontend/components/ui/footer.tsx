@@ -35,10 +35,8 @@ const Footer = () => {
                     </div>
 
                     <div className='mb-6 md:ml-10 lg:ml-8 xl:ml-16 lg:mb-0'>
-                        <h2 className='relative pb-4 mb-5 text-2xl font-semibold text-white'>
-                            Useful Links
-                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary' />
-                        </h2>
+                        <h2 className='footer-title'>Useful Links</h2>
+
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
                                 <Link href='#' className='list-wrap'>
@@ -55,6 +53,11 @@ const Footer = () => {
                                     Our partners
                                 </Link>
                             </li>
+                            <li className='mb-3'>
+                                <Link href='#' className='list-wrap'>
+                                    Become a partner
+                                </Link>
+                            </li>
                             <li>
                                 <Link href='#' className='list-wrap'>
                                     Work at Future Learn
@@ -63,20 +66,13 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className='mb-6 lg:ml-2 xl:ml-8 md:mb-0'>
-                        <h2 className='relative pb-4 mb-5 text-2xl font-semibold text-white'>
-                            Our Company
-                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary' />
-                        </h2>
+                    <div className='mb-6 lg:ml-2 xl:ml-10 md:mb-0'>
+                        <h2 className='footer-title'>Our Company</h2>
+
                         <ul className='font-medium text-color-gray-1'>
                             <li className='mb-3'>
                                 <Link href='#' className='list-wrap'>
                                     Contact Us
-                                </Link>
-                            </li>
-                            <li className='mb-3'>
-                                <Link href='#' className='list-wrap'>
-                                    Become a partner
                                 </Link>
                             </li>
                             <li className='mb-3'>
@@ -93,23 +89,21 @@ const Footer = () => {
                     </div>
 
                     <div className='md:ml-10 lg:ml-0 xl:ml-8'>
-                        <h2 className='relative pb-4 mb-5 text-2xl font-semibold text-white'>
-                            Get In Touch
-                            <span className='absolute bottom-0 left-0 w-10 h-1 rounded-full bg-theme-primary' />
-                        </h2>
+                        <h2 className='footer-title'>Get In Touch</h2>
+
                         <div className='text-color-gray-1'>
                             <p className='mb-4'>
                                 when an unknown printer took
                                 <br />
                                 galley type and scrambled
                             </p>
-                            
+
                             <Social
                                 className='flex items-center gap-4'
                                 urlClassName='hover:text-theme-secondary'
                                 youtubePolygonClassName='fill-color-black'
                             />
-                            
+
                             <div className='app-download'>
                                 <Link href={PLAY_STORE_URL} className='md:w-full'>
                                     <Image
