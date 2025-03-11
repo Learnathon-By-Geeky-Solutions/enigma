@@ -13,8 +13,8 @@ const PopupVideo = () => {
             <DialogContent>
                 <VisuallyHidden asChild>
                     <DialogHeader>
-                        <DialogTitle className='hidden' />
-                        <DialogDescription className='hidden' />
+                        <DialogTitle />
+                        <DialogDescription />
                     </DialogHeader>
                 </VisuallyHidden>
 
@@ -23,7 +23,7 @@ const PopupVideo = () => {
                     title='youtube video'
                     className='aspect-video w-10/12 md:w-full mx-auto'
                     frameBorder='0'
-                    allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                    allow='accelerometer; autoplay; encrypted-media; gyroscope'
                     allowFullScreen
                 />
             </DialogContent>

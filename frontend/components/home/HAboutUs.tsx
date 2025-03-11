@@ -1,6 +1,5 @@
 'use client';
 
-import { ChevronRight } from 'lucide-react';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import AOS from 'aos';
@@ -12,14 +11,19 @@ import studentGrp from '@/assets/images/others/student-grp.png';
 
 import '@/styles/about.css';
 
-import ArrowButton from '../ui/arrow-button';
-import Container from '../ui/container';
-
-import DecorativeUnderline from '../icons/decorative-underline';
+import AboutContent from '../about/AboutContent';
 
 import PopupVideo from '../shared/popup-video';
 
+import Container from '../ui/container';
+
 const HAboutUs = () => {
+    const title = {
+        text1: 'Thousand Of Top',
+        text2: 'Courses',
+        text3: 'Now in One Place'
+    };
+
     useEffect(() => {
         AOS.init();
 
@@ -50,50 +54,7 @@ const HAboutUs = () => {
 
                     <div className='w-full md:px-4 lg:w-1/2'>
                         <div className='about-content'>
-                            <div className='section-title'>
-                                <span className='sub-title'>Get More About Us</span>
-                                <h2 className='title'>
-                                    Thousand Of Top
-                                    <span className='relative mx-2'>
-                                        <DecorativeUnderline />
-                                        Courses
-                                    </span>
-                                    Now in One Place
-                                </h2>
-                            </div>
-
-                            <p className='mb-[22px] leading-[1.75] text-body-color'>
-                                Our intuitive shared learning platform makes it easy for team members to organize,
-                                prioritize, and access educational content. Learn about our Web Platform Baseline and
-                                how it enhances your learning experience.
-                            </p>
-
-                            <ul className='about-info-list'>
-                                <li className='about-info-list-item'>
-                                    <span>
-                                        <ChevronRight size={18} />
-                                    </span>
-                                    <p>The Most World Class Instructors</p>
-                                </li>
-                                <li className='about-info-list-item'>
-                                    <span>
-                                        <ChevronRight size={18} />
-                                    </span>
-                                    <p>Access Your Class anywhere</p>
-                                </li>
-                                <li className='about-info-list-item'>
-                                    <span>
-                                        <ChevronRight size={18} />
-                                    </span>
-                                    <p>Flexible Course Plan</p>
-                                </li>
-                            </ul>
-
-                            <div className='btn-wrap'>
-                                <ArrowButton href='/about-us' className='btn arrow-btn'>
-                                    Start Free Trial
-                                </ArrowButton>
-                            </div>
+                            <AboutContent title={title} />
                         </div>
                     </div>
                 </div>

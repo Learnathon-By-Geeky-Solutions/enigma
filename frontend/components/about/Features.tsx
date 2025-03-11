@@ -11,21 +11,21 @@ const Features = () => {
     const features = [
         {
             id: 1,
-            icon: BookIcon,
+            icon: GraduationIcon,
             title: 'Expert Tutors',
-            description: 'when an unknown printer took a galley offe type and scrambled makes.',
+            description: 'Learn from industry professionals with years of teaching experience.',
         },
         {
             id: 2,
-            icon: GraduationIcon,
+            icon: BookIcon,
             title: 'Effective Courses',
-            description: 'when an unknown printer took a galley offe type and scrambled makes.',
+            description: 'Our courses are designed to maximize learning outcomes efficiently.',
         },
         {
             id: 3,
             icon: CertificateIcon,
             title: 'Earn Certificate',
-            description: 'when an unknown printer took a galley offe type and scrambled makes.',
+            description: 'Receive industry-recognized certificates upon course completion.',
         },
     ];
 
@@ -38,9 +38,9 @@ const Features = () => {
                             <span className='sub-title'>Our Top Features</span>
                             <h2 className='title'>Achieve Your Goal With SkillGro</h2>
                             <p className='mt-[15px] leading-[1.75] text-body-color'>
-                                when an unknown printer took a galley of type and scrambled make
+                                SkillGro provides comprehensive educational resources tailored to your needs
                                 <br className='hidden md:block' />
-                                <span className='ml-1 md:ml-0'>specimen book has survived not only five centuries</span>
+                                <span className='ml-1 md:ml-0'>helping you achieve your educational and career goals.</span>
                             </p>
                         </div>
                     </div>
