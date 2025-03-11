@@ -9,8 +9,8 @@ import { generateCircleLetters } from '@/utils/circleLetters';
 import { Accordion } from '../ui/accordion';
 import CircularText from '../ui/circular-text';
 import Container from '../ui/container';
-import DecorativeShape from '../ui/icons/decorative-shape';
-import FaqLearningCurve from '../ui/icons/faq-learning-curve';
+import DecorativeShape from '../icons/decorative-shape';
+import FaqLearningCurve from '../icons/faq-learning-curve';
 
 import FaqItem from './FaqItem';
 

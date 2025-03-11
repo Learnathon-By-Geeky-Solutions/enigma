@@ -13,6 +13,7 @@ const TopCategories = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='flex flex-wrap'>
                     <div className='w-full basis-auto grow-0 shrink-0'>
                         <div className='relative py-[30px] px-5 md:py-[45px] md:px-[90px] lg:pt-[52px] lg:px-[100px] lg:pb-[45px] xl:px-[145px] rounded-lg md:rounded-full bg-color-gray-4'>

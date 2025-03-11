@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { AuthorAvatarProps } from '@/types/avatar';
 
 const AuthorAvatar = ({ imageSrc, name }: AuthorAvatarProps) => {

@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-
+import { usePathname } from 'next/navigation';
 import { LayoutGrid, UserRound } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 import { LOGO_URL } from '@/config/constants';
 import { navLink } from '@/config/navigation';

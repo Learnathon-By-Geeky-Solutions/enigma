@@ -20,8 +20,9 @@ import '@/styles/banner.css';
 import ArrowButton from '../ui/arrow-button';
 import AuthorAvatar from '../ui/author-avatar';
 import Container from '../ui/container';
-import BannerLearningCurve from '../ui/icons/banner-learning-curve';
-import DecorativeUnderline from '../ui/icons/decorative-underline';
+
+import DecorativeUnderline from '../icons/decorative-underline';
+import LearningCurve from '../icons/learning-curve';
 
 const Banner = () => {
     useEffect(() => {
@@ -42,7 +43,7 @@ const Banner = () => {
                                 Never Stop
                                 <span className='relative md:ml-2'>
                                     <span className='svg-icon'>
-                                        <BannerLearningCurve />
+                                        <LearningCurve stroke='#031333' />
                                     </span>
                                     <DecorativeUnderline />
                                     Learning
@@ -50,11 +51,11 @@ const Banner = () => {
                                 <br />
                                 Life <b>Never Stop</b> Teaching
                             </h3>
-                            
+
                             <p data-aos='fade-right' data-aos-delay='600' className='tracking-tight'>
                                 Every teaching and learning journey is unique. We&apos;ll help guide your way.
                             </p>
-                            
+
                             <div className='banner-btn-wrap' data-aos='fade-right' data-aos-delay='800'>
                                 <ArrowButton href='/contact' className='btn arrow-btn'>
                                     Start Free Trial
@@ -62,30 +63,41 @@ const Banner = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className='w-full lg:w-6/12'>
                         <div className='banner-images'>
                             <Image src={bannerImg} alt='img' className='main-img' priority={true} />
-                            
+
                             <div className='px-4 shape big-shape' data-aos='fade-up-right' data-aos-delay='600'>
                                 <Image src={shape1} alt='shape' className='max-w-full shape-transform-1' />
                             </div>
-                            
+
                             <Image src={dots} alt='shape' className='shape bg-dots rotateme' priority={true} />
-                            
+
                             <Image src={shape2} alt='shape' className='shape small-shape shape-transform-2' />
-                            
+
                             <div className='banner-author'>
                                 <AuthorAvatar imageSrc={author01} name='Robert Fox' />
                                 <AuthorAvatar imageSrc={author02} name='Michel Jones' />
-                                <Image src={shape02} alt='shape' className='absolute top-[9px] left-[calc(100%-11px)] -z-10' />
+                                <Image
+                                    src={shape02}
+                                    alt='shape'
+                                    className='absolute top-[9px] left-[calc(100%-11px)] -z-10'
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </Container>
-            
-            <Image src={shape01} alt='shape' className='line-shape' data-aos='fade-right' data-aos-delay='1600' priority={true} />
+
+            <Image
+                src={shape01}
+                alt='shape'
+                className='line-shape'
+                data-aos='fade-right'
+                data-aos-delay='1600'
+                priority={true}
+            />
         </section>
     );
 };

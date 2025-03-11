@@ -1,64 +1,46 @@
-'use client';
-
 import { ChevronRight } from 'lucide-react';
-import { useEffect } from 'react';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
-import aboutImg from '@/assets/images/others/about-img.png';
-import aboutShape from '@/assets/images/others/about-shape.svg';
-import studentGrp from '@/assets/images/others/student-grp.png';
+import innerAboutImg from '@/assets/images/others/inner-about-img.png';
 
 import '@/styles/about.css';
 
 import ArrowButton from '../ui/arrow-button';
 import Container from '../ui/container';
 
+import LearningCurve from '../icons/learning-curve';
 import DecorativeUnderline from '../icons/decorative-underline';
 
 import PopupVideo from '../shared/popup-video';
 
-const HAboutUs = () => {
-    useEffect(() => {
-        AOS.init();
-
-        return () => {
-            AOS.refresh();
-        };
-    }, []);
-
+const AboutArea = () => {
     return (
         <section className='py-[100px] md:py-[120px]'>
-            <Container className='px-4'>
+            <Container>
                 <div className='flex flex-col flex-wrap items-center justify-center md:flex-row'>
-                    <div className='w-full md:px-4 md:w-3/4 lg:w-1/2'>
-                        <div className='about-images'>
-                            <Image src={aboutImg} alt='about img' className='w-full h-auto' />
-                            <Image src={aboutShape} alt='about shape' className='shape alltuchtopdown' />
+                    <div className='w-full px-4 md:w-3/4 lg:w-1/2'>
+                        <div className='inner-about-images'>
+                            <Image src={innerAboutImg} alt='about img' className='w-full h-auto' />
+
+                            <span className='svg-icon'>
+                                <LearningCurve stroke='#5751E1' />
+                            </span>
 
                             <PopupVideo />
-
-                            <div data-aos='fade-right' data-aos-delay='200' className='about-enrolled'>
-                                <p className='title'>
-                                    <span>36K+</span> Active Subscribers
-                                </p>
-                                <Image src={studentGrp} alt='student grp' />
-                            </div>
                         </div>
                     </div>
 
-                    <div className='w-full md:px-4 lg:w-1/2'>
-                        <div className='about-content'>
+                    <div className='w-full px-4 lg:w-1/2'>
+                        <div className='inner-about-content'>
                             <div className='section-title'>
                                 <span className='sub-title'>Get More About Us</span>
                                 <h2 className='title'>
-                                    Thousand Of Top
+                                    Empowering Students to reach their
                                     <span className='relative mx-2'>
                                         <DecorativeUnderline />
-                                        Courses
+                                        potential
                                     </span>
-                                    Now in One Place
+                                    Goal For Next Level Challenge.
                                 </h2>
                             </div>
 
@@ -102,4 +84,4 @@ const HAboutUs = () => {
     );
 };
 
-export default HAboutUs;
+export default AboutArea;

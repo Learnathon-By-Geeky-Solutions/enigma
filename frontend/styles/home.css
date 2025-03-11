@@ -1,12 +1,3 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Poppins', sans-serif;
-}
-
 @media (max-width: 1500px) {
     /* Styles for extra large screens will be added here */
 }

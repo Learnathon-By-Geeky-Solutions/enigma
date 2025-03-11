@@ -22,6 +22,7 @@ const Footer = () => {
                         <figure>
                             <Image src={SECONDARY_LOGO} alt='Logo' width={156} height={38} />
                         </figure>
+
                         <div className='mt-8 text-color-gray-1'>
                             <p>
                                 When an unknown printer took galley of type and scrambled it to make pspecimen bookt
