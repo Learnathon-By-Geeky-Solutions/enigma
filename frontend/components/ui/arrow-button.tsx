@@ -1,14 +1,13 @@
 import Link from 'next/link';
 
-import ArrowRightIcon from './icons/arrow-right-icon';
-
 import { ArrowButtonProps } from '@/types/navigation';
+
+import ArrowRightIcon from '../icons/arrow-right-icon';
 
 const ArrowButton = ({ href, className, children }: ArrowButtonProps) => {
     return (
         <Link href={href} className={className}>
-            {children}{' '}
-            <ArrowRightIcon />
+            {children} <ArrowRightIcon />
         </Link>
     );
 };

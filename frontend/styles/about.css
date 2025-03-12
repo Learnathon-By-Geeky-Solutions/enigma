@@ -1,0 +1,235 @@
+.about-images {
+    margin-left: 96px;
+    margin-right: -25px;
+    position: relative;
+}
+
+.inner-about-images {
+    position: relative;
+}
+
+.inner-about-images img {
+    border-radius: 400px;
+}
+
+.about-images .shape {
+    position: absolute;
+    top: 36px;
+    right: 132px;
+    z-index: 1;
+}
+
+.inner-about-images .svg-icon {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+.popup-video {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-white);
+}
+
+.about-images .popup-video {
+    width: 76px;
+    height: 76px;
+    color: var(--color-red);
+    z-index: 1;
+}
+
+.inner-about-images .popup-video {
+    width: 60px;
+    height: 60px;
+}
+
+.inner-about-images .popup-video svg {
+    width: 16px;
+    color: var(--theme-primary);
+    transition: all .3s ease-out 0s;
+}
+
+.about-enrolled {
+    position: absolute;
+    left: -90px;
+    bottom: 35px;
+    background: var(--color-white);
+    border-radius: 10px;
+    border: 1px solid #b2bbcc;
+    box-shadow: -8px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 12px 20px;
+}
+
+.about-enrolled .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--theme-primary);
+    margin: 0 0 3px;
+}
+
+.about-enrolled .title span {
+    font-weight: 700;
+    color: var(--text-heading-color);
+}
+
+.about-enrolled img {
+    max-width: 155px;
+    margin: 0 auto;
+}
+
+.about-content {
+    margin-left: 55px;
+}
+
+.inner-about-content {
+    margin-left: 40px;
+}
+
+.about-content .section-title {
+    margin: 0 0 12px;
+}
+
+.inner-about-content .section-title {
+    margin: 0 0 12px;
+}
+
+.section-title .title span:not(.svg-icon) {
+    color: var(--color-white);
+    padding: 0 13px 0 20px;
+    font-weight: 700;
+    display: inline-block;
+    z-index: 1;
+}
+
+.section-title .title span:not(.svg-icon)>svg {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 59px;
+    z-index: -1;
+    color: var(--theme-secondary);
+}
+
+.about-content .about-info-list {
+    margin-bottom: 40px;
+}
+
+.inner-about-content .about-info-list {
+    margin-bottom: 40px;
+}
+
+.about-info-list-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0 0 15px;
+}
+
+.about-info-list-item span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30px;
+    background: var(--theme-secondary);
+    border: 1px solid #282568;
+    border-radius: 50%;
+    box-shadow: 4px 3px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease-out 0s;
+    color: var(--text-heading-color);
+}
+
+.about-info-list-item span:hover {
+    box-shadow: none;
+}
+
+.about-info-list-item p {
+    color: var(--text-heading-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-wrap {
+    display: flex;
+}
+
+@media (max-width: 1199.98px) {
+    .about-images {
+        margin-left: 50px;
+        margin-right: 0;
+    }
+
+    .about-images .shape {
+        right: 110px;
+    }
+
+    .inner-about-images .svg-icon {
+        right: 0;
+        top: 0;
+    }
+
+    .about-enrolled {
+        left: -50px;
+        bottom: 30px;
+    }
+
+    .about-content {
+        margin: 0;
+    }
+
+    .inner-about-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .about-images {
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .inner-about-images {
+        margin-bottom: 50px;
+    }
+
+    .about-images .shape {
+        right: 150px;
+    }
+
+    .about-enrolled {
+        left: -80px;
+        bottom: 53px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .about-images .shape {
+        right: 90px;
+    }
+
+    .about-enrolled {
+        display: none;
+    }
+
+    .section-title .title {
+        font-size: 29px;
+    }
+
+    .section-title .title span:not(.svg-icon)>svg {
+        height: 45px;
+        top: -2px;
+    }
+}
