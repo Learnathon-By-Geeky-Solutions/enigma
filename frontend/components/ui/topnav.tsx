@@ -1,12 +1,12 @@
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
-
-import Container from '@/components/ui/container';
 
 import envelope from '@/assets/images/icons/envelope.svg';
 import map from '@/assets/images/icons/map-marker.svg';
 import phone from '@/assets/images/icons/phone.svg';
+
+import Container from '@/components/ui/container';
 
 import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, TWITTER_URL, YOUTUBE_URL } from '@/config/constants';
 
@@ -21,6 +21,7 @@ const TopNav = () => {
                                 <Image src={map} alt='icons' />
                                 <span>589 5th Ave, NY 10024, USA</span>
                             </li>
+
                             <li className='flex items-center gap-2 text-sm font-medium text-color-gray-5'>
                                 <Image src={envelope} alt='icons' />
                                 <Link
@@ -32,6 +33,7 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </div>
+
                     <div>
                         <div className='flex items-center gap-y-2.5 gap-x-7'>
                             <div className='flex items-center gap-2.5 text-sm font-medium text-color-gray-5'>
@@ -41,6 +43,7 @@ const TopNav = () => {
                                     +123 599 8989
                                 </Link>
                             </div>
+                            
                             <ul className='flex items-center gap-y-2.5 gap-x-3 justify-end'>
                                 <li className='text-sm font-medium opacity-50 text-color-gray-5'>Follow Us On :</li>
                                 <li className='text-color-gray-5 hover:text-white'>

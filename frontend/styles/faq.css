@@ -110,27 +110,8 @@
     width: 95%;
 }
 
-.section-title {
+.faq-content .section-title {
     padding-bottom: 10px;
-}
-
-.section-title .sub-title {
-    display: inline-block;
-    line-height: 1.62;
-    background: var(--color-gray-3);
-    border-radius: 30px;
-    padding: 3px 16px;
-    font-weight: 500;
-    color: var(--theme-primary);
-    margin: 0 0 14px;
-}
-
-.section-title .title {
-    font-size: 36px;
-    line-height: 1.33;
-    margin: 0;
-    letter-spacing: -.75px;
-    text-transform: capitalize;
 }
 
 .faq-content p {

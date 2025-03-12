@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -23,7 +24,6 @@ import {
     BreadcrumbSeparator,
 } from '../ui/breadcrumb';
 import Container from '../ui/container';
-import Image from 'next/image';
 
 interface BreadcrumbsProps {
     title: string;

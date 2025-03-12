@@ -34,6 +34,7 @@ const Newsletter = () => {
                             <Image src={shape02} alt='newsletter shape 2' className='alltuchtopdown' />
                         </div>
                     </div>
+
                     <div className='w-full lg:px-4 lg:w-2/3'>
                         <div className='newsletter-content'>
                             <h2 className='title'>
@@ -44,6 +45,7 @@ const Newsletter = () => {
                                 new{' '}
                                 <span>courses & study?</span> 
                             </h2>
+
                             <div className='newsletter-form'>
                                 <form>
                                     <input type='email' placeholder='Type your e-mail' />
@@ -54,6 +56,7 @@ const Newsletter = () => {
                     </div>
                 </div>
             </Container>
+            
             <div className='newsletter-shape'>
                 <Image src={shape03} alt='newsletter shape 3' data-aos='fade-left' data-aos-delay='400' />
             </div>
