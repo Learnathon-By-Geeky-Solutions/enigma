@@ -1,4 +1,4 @@
-# enigma
+# Enigma
 
 ## Team Members
 - mehedi132 (Team Leader)
@@ -8,7 +8,6 @@
 ## Mentor
 - learnwithkawsar
 
-**## Project Description
 # AI-Powered Job Preparation Platform
 
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)
@@ -16,7 +15,7 @@
 
 ## Overview
 
-The **AI-Powered Job Preparation Platform** is a web-based application designed to assist job seekers in Bangladesh with job preparation, interview practice, and skill evaluation. The platform integrates AI-driven features to provide personalized learning experiences, including job listings, study materials, mock interviews, and MCQ evaluations.
+The **AI-Powered Job Preparation Platform** is a web-based application designed to assist jobseekers in Bangladesh with job preparation, interview practice, and skill evaluation. The platform integrates AI-driven features to provide personalized learning experiences, including job listings, study materials, mock interviews, and MCQ evaluations.
 
 ### Key Features
 
@@ -40,9 +39,12 @@ For detailed documentation, visit the [Project Wiki](https://github.com/Learnath
 
 ### Steps
 
+### Steps
+
 1. **Clone the Repository**:
+
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/Learnathon-By-Geeky-Solutions/enigma.git
    cd your-repo
 
 ---
@@ -52,8 +54,7 @@ For detailed documentation, visit the [Project Wiki](https://github.com/Learnath
 
 ### Set Up the Backend
 
-1. **Navigate to the Backend Directory**:
-   ```bash
+ **Navigate to the Backend Directory**:
    cd backend
    ```
 
@@ -162,7 +163,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions or feedback, please open an issue on the [GitHub Issues](https://github.com/Learnathon-By-Geeky-Solutions/enigma/issues) page or contact the maintainers at [your-email@example.com](mailto:mh20011999@gmail.com).
+For questions or feedback, please open an issue on the [GitHub Issues](https://github.com/Learnathon-By-Geeky-Solutions/enigma/issues) page or contact the maintainers at [Mehedi ](mailto:mh20011999@gmail.com).
 
 - [Project Documentation](docs/)
 - [Development Setup](docs/setup.md)
