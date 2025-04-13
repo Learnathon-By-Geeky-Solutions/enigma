@@ -55,7 +55,8 @@ export default {
     			'body-color': '#6D6C80',
     			'heading-color': '#161439',
     			'border-color': {
-    				'1': 'rgba(6, 35, 91, 0.19)'
+    				'1': 'rgba(6, 35, 91, 0.19)',
+					'2': '#E1E1E1'
     			},
     			'color-black': {
     				'1': '#212529',
@@ -75,6 +76,7 @@ export default {
     				'4': '#F7F7F9',
     				'5': '#E6EAEF',
 					'6': '#7F7E97',
+					'7': '#F7F7FA',
     				DEFAULT: '#F4F4F4'
     			}
     		},
