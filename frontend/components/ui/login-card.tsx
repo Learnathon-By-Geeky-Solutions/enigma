@@ -35,7 +35,7 @@ const LoginCard = () => {
         if (!email) newErrors.email = 'Email is a required field';
         else if (!validateEmail(email)) newErrors.email = 'Email must be a valid email';
 
-        if (!password) newErrors.password = 'Password is a required field';
+        if (!password) newErrors.password = 'Password is a required field'; // NOSONAR
 
         if (Object.keys(newErrors).length) {
             setErrors((prev) => ({ ...prev, ...newErrors }));
@@ -54,7 +54,7 @@ const LoginCard = () => {
                 toast('Login successfully');
                 router.push('/');
             } else {
-                toast.error(res.message || 'Login failed');
+                toast.error(res.message ?? 'Login failed');
             }
         } catch (error) {
             console.error(error);

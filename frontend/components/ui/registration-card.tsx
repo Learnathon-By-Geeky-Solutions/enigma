@@ -51,7 +51,7 @@ const RegistrationCard = () => {
         if (!email) newErrors.email = 'Email is a required field';
         else if (!validateEmail(email)) newErrors.email = 'Email must be a valid email';
 
-        if (!password) newErrors.password = 'Password is a required field';
+        if (!password) newErrors.password = 'Password is a required field'; // NOSONAR
 
         if (!confirmPassword) newErrors.confirmPassword = 'Confirm password is a required field';
         else if (confirmPassword !== password) newErrors.confirmPassword = 'Both passwords must be the same';
@@ -70,7 +70,7 @@ const RegistrationCard = () => {
                 toast('Registration successfully');
                 router.push('/login');
             } else {
-                toast.error(res.message || 'Registration failed');
+                toast.error(res.message ?? 'Registration failed');
             }
         } catch (error) {
             console.error(error);
