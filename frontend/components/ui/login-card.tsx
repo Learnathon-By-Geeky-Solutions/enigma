@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 import '@/styles/login.css';
@@ -16,49 +17,63 @@ import ArrowRightIcon from '../icons/arrow-right-icon';
 
 const LoginCard = () => {
     const router = useRouter();
+    const [errors, setErrors] = useState({
+        email: '',
+        password: ''
+    });
+    const [isLoading, setIsLoading] = useState(false);
     
     const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        setIsLoading(true);
+        setErrors({email: '', password: ''});
 
         const formData = new FormData(e.currentTarget);
         const email = formData.get('email')?.toString();
         const password = formData.get('password')?.toString();
-        const formErrors = document.querySelectorAll('.form_error') as NodeListOf<HTMLParagraphElement>;
 
         if (!email) {
-            formErrors[0].textContent = 'Email is a required field';
+            setErrors(prev => ({...prev, email: 'Email is a required field'}));
+            setIsLoading(false);
             return;
         }
         
         if (!validateEmail(email)) {
-            formErrors[0].textContent = 'Email must be a valid email';
+            setErrors(prev => ({...prev, email: 'Email must be a valid email'}));
+            setIsLoading(false);
             return;
         }
-        formErrors[0].textContent = '';
 
         if (!password) {
-            formErrors[1].textContent = 'Password is a required field';
+            setErrors(prev => ({...prev, password: 'Password is a required field'}));
+            setIsLoading(false);
             return;
         }
-        formErrors[1].textContent = '';
 
         const loginData = { email, password };
 
         try {
             const res = await loginUser(loginData);
             if (res.success) {
-                localStorage.setItem('accessToken', res.accessToken);
+                if (typeof window !== 'undefined') {
+                    localStorage.setItem('accessToken', res.accessToken);
+                }
                 toast('Login successfully');
                 router.push('/');
+            } else {
+                toast.error(res.message || 'Login failed');
             }
-        } catch (err) {
-            console.error(err);
+        } catch (error) {
+            console.error(error);
+            toast.error('An error occurred during login');
+        } finally {
+            setIsLoading(false);
         }
     };
 
     return (
         <section className='w-full md:w-[92%] lg:w-3/5 xl:w-[45%]'>
-            <div className='singUp-wrap'>
+            <div className='signUp-wrap'>
                 <h2 className='title'>Welcome back!</h2>
                 <p className='tracking-tight text-body-color'>
                     Hey there! Ready to log in? Just enter your username and password below and you&apos;ll be back in
@@ -75,12 +90,12 @@ const LoginCard = () => {
                     <div className='form-grp'>
                         <label htmlFor='email'>Email</label>
                         <input id='email' name='email' type='text' placeholder='Email' />
-                        <p className='form_error'></p>
+                        <p className='form_error'>{errors.email}</p>
                     </div>
                     <div className='form-grp'>
                         <label htmlFor='password'>Password</label>
                         <input id='password' name='password' type='password' placeholder='Password' />
-                        <p className='form_error'></p>
+                        <p className='form_error'>{errors.password}</p>
                     </div>
                     <div className='account__check'>
                         <div className='account__check-remember'>
@@ -98,8 +113,8 @@ const LoginCard = () => {
                             </Link>
                         </div>
                     </div>
-                    <button type='submit' className='btn btn-two arrow-btn'>
-                        Sign In <ArrowRightIcon />
+                    <button type='submit' className='btn btn-two arrow-btn' disabled={isLoading}>
+                        {isLoading ? 'Processing...' : 'Sign In'} {!isLoading && <ArrowRightIcon />}
                     </button>
                 </form>
                 <div className='account__switch'>

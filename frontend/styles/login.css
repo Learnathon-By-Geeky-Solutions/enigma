@@ -1,16 +1,16 @@
-.singUp-wrap {
+.signUp-wrap {
     background: #f7f7fa;
     border: 1px solid #E1E1E1;
     border-radius: 8px;
     padding: 30px 50px 40px;
 }
 
-.singUp-wrap .title {
+.signUp-wrap .title {
     font-size: 36px;
     margin-bottom: 10px;
 }
 
-.singUp-wrap p {
+.signUp-wrap p {
     margin-bottom: 25px;
 }
 
@@ -55,7 +55,8 @@
     color: var(--text-heading-color);
     padding: 20px;
     top: -35px;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     background: #f7f7fa;
 }
@@ -187,11 +188,11 @@
 }
 
 @media (max-width: 767.98px) {
-    .singUp-wrap {
+    .signUp-wrap {
         padding: 30px 20px;
     }
 
-    .singUp-wrap .title {
+    .signUp-wrap .title {
         font-size: 26px;
     }
 }

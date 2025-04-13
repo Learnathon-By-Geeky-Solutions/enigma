@@ -11,6 +11,7 @@ export default function Registration() {
         <>
             <Breadcrumbs title='Registration' />
             <div className='py-[100px] md:py-[120px]'>
+                <h1 className="sr-only">User Registration</h1>
                 <div className='flex justify-center px-4'>
                     <RegistrationCard />
                 </div>
