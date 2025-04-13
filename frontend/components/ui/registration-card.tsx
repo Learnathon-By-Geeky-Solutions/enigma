@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { IoEye, IoEyeOff } from 'react-icons/io5';
 import { toast } from 'react-toastify';
 
 import '@/styles/login.css';
@@ -16,6 +17,9 @@ import SubmitButton from '../form/SubmitButton';
 
 const RegistrationCard = () => {
     const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     const [errors, setErrors] = useState({
         firstName: '',
         lastName: '',
@@ -23,7 +27,6 @@ const RegistrationCard = () => {
         password: '',
         confirmPassword: '',
     });
-    const [isLoading, setIsLoading] = useState(false);
 
     const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -31,11 +34,11 @@ const RegistrationCard = () => {
         setErrors({ firstName: '', lastName: '', email: '', password: '', confirmPassword: '' });
 
         const formData = new FormData(e.currentTarget);
-        const firstName = formData.get('fname') as string;
-        const lastName = formData.get('lname') as string;
+        const firstName = formData.get('firstName') as string;
+        const lastName = formData.get('lastName') as string;
         const email = formData.get('email') as string;
         const password = formData.get('password') as string;
-        const confirmPassword = formData.get('c_password') as string;
+        const confirmPassword = formData.get('confirmPassword') as string;
         const newErrors: {
             firstName?: string;
             lastName?: string;
@@ -88,45 +91,57 @@ const RegistrationCard = () => {
             <form className='account__form' onSubmit={registrationHandler}>
                 <div className='flex flex-col gap-0 md:gap-5 md:flex-row'>
                     <div className='w-full'>
-                        <FormInput 
-                            label='First Name' 
-                            name='fname' 
-                            type='text' 
-                            placeholder='First Name' 
+                        <FormInput
+                            label='First Name'
+                            name='firstName'
+                            type='text'
+                            placeholder='First Name'
                             error={errors.firstName}
                         />
                     </div>
                     <div className='w-full'>
-                        <FormInput 
-                            label='Last Name' 
-                            name='lname' 
-                            type='text' 
-                            placeholder='Last Name' 
+                        <FormInput
+                            label='Last Name'
+                            name='lastName'
+                            type='text'
+                            placeholder='Last Name'
                             error={errors.lastName}
                         />
                     </div>
                 </div>
-                <FormInput 
-                    label='Email' 
-                    name='email' 
-                    type='text' 
-                    placeholder='Email' 
-                    error={errors.email}
-                />
-                <FormInput 
-                    label='Password' 
-                    name='password' 
-                    type='password' 
-                    placeholder='Password' 
-                    error={errors.password}
-                />
-                <FormInput 
-                    label='Confirm Password' 
-                    name='c_password' 
-                    type='password' 
-                    placeholder='Confirm Password' 
-                    error={errors.confirmPassword}
-                />
+                <FormInput label='Email' name='email' type='text' placeholder='Email' error={errors.email} />
+                <div className='relative'>
+                    <FormInput
+                        label='Password'
+                        name='password'
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder='Password'
+                        error={errors.password}
+                    />
+                    <button
+                        type='button'
+                        className='absolute right-5 top-12'
+                        onClick={() => setShowPassword(!showPassword)}
+                    >
+                        {showPassword ? <IoEyeOff /> : <IoEye />}
+                    </button>
+                </div>
+                <div className='relative'>
+                    <FormInput
+                        label='Confirm Password'
+                        name='confirmPassword'
+                        type={showConfirmPassword ? 'text' : 'password'}
+                        placeholder='Confirm Password'
+                        error={errors.confirmPassword}
+                    />
+                    <button
+                        type='button'
+                        className='absolute right-5 top-12'
+                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    >
+                        {showConfirmPassword ? <IoEyeOff /> : <IoEye />}
+                    </button>
+                </div>
                 <SubmitButton text='Sign Up' isLoading={isLoading} />
             </form>
             <div className='account__switch'>
