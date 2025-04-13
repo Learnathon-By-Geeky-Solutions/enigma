@@ -14,7 +14,7 @@ export const registerUser = async (data: RegistrationFormValues) => {
         if (!res.ok) {
             throw new Error(`Registration failed with status: ${res.status}`);
         }
-        
+
         const userInfo = await res.json();
         return userInfo;
     } catch (error) {
