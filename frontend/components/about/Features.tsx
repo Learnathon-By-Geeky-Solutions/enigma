@@ -19,7 +19,7 @@ const Features = () => {
             id: 2,
             icon: BookIcon,
             title: 'Effective Courses',
-            description: 'Our courses are designed to maximize learning outcomes efficiently.',
+            description: 'Our courses are designed to elevate learning outcomes efficiently.',
         },
         {
             id: 3,

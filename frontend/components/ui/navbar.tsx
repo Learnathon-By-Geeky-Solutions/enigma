@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { LayoutGrid, UserRound } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { LOGO_URL } from '@/config/constants';
 import { navLink } from '@/config/navigation';
@@ -13,10 +13,19 @@ import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetT
 import Container from './container';
 import Social from './social';
 
-const Navbar = () => {
+type UserProps = {
+    user?: {
+        name?: string | null | undefined;
+        email?: string | null | undefined;
+        image?: string | null | undefined;
+    };
+};
+
+const Navbar = ({ session }: { session: UserProps | null }) => {
     const pathname = usePathname();
     const [hasShadow, setHasShadow] = useState(false);
     const SCROLL_THRESHOLD = 44;
+    console.log('session', session);
 
     useEffect(() => {
         // Throttle function to limit execution frequency

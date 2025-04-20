@@ -10,6 +10,7 @@
     --color-black: #06042e;
     --color-black-1: #212529;
     --color-black-2: #141109;
+    --color-black-3: #000000;
     --color-blue: #050071;
     --color-blue-1: #433ec2;
     --color-blue-2: #4a44d1;
@@ -34,6 +35,12 @@ h3 {
     font-weight: 600;
     color: var(--text-heading-color);
     margin: 0;
+}
+
+label {
+    display: inline-block;
+    color: var(--text-heading-color);
+    cursor: pointer;
 }
 
 .section-title .sub-title {
