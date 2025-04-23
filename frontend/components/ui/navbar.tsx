@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { LayoutGrid, UserRound } from 'lucide-react';
+import { LayoutGrid } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,6 +10,7 @@ import { LOGO_URL } from '@/config/constants';
 import { navLink } from '@/config/navigation';
 
 import { Sheet, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from './sheet';
+import AvatarDropdown from './avatar-dropdown';
 import Container from './container';
 import Social from './social';
 
@@ -25,22 +26,23 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
     const pathname = usePathname();
     const [hasShadow, setHasShadow] = useState(false);
     const SCROLL_THRESHOLD = 44;
-    console.log('session', session);
+
+    const mobileNavLink = session?.user ? navLink : [...navLink, { title: 'Log in', url: '/login' }];
 
     useEffect(() => {
         // Throttle function to limit execution frequency
-        const throttle = (func: (...args: unknown[]) => void, limit: number): (...args: unknown[]) => void => {
+        const throttle = (func: (...args: unknown[]) => void, limit: number): ((...args: unknown[]) => void) => {
             let inThrottle: boolean;
 
-            return function(this: unknown, ...args: unknown[]) {
+            return function (this: unknown, ...args: unknown[]) {
                 if (!inThrottle) {
                     func.apply(this, args);
                     inThrottle = true;
-                    setTimeout(() => inThrottle = false, limit);
+                    setTimeout(() => (inThrottle = false), limit);
                 }
             };
         };
-        
+
         const handleScroll = throttle(() => {
             if (window.scrollY > SCROLL_THRESHOLD) {
                 setHasShadow(true);
@@ -48,16 +50,20 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
                 setHasShadow(false);
             }
         }, 100);
-    
+
         window.addEventListener('scroll', handleScroll);
-    
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     return (
-        <header className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-5 md:py-6 text-heading-color transition-shadow duration-300 ${hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'}`}>
+        <header
+            className={`sticky top-0 left-0 right-0 z-50 px-4 bg-white py-5 md:py-6 text-heading-color transition-shadow duration-300 ${
+                hasShadow ? 'shadow-[0_10px_15px_rgba(25,25,25,0.1)]' : 'shadow-none'
+            }`}
+        >
             <Container>
                 <nav className='flex items-center justify-between'>
                     <Link href='/'>
@@ -81,21 +87,20 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
                         </ul>
                     </div>
 
-                    <Link
-                        href='/login'
-                        className='hidden py-2 font-semibold border rounded-full border-border-color-1 px-7 bg-theme-secondary hover:text-white hover:bg-theme-primary lg:block'
-                        aria-label='Log in to your account'
-                    >
-                        Log in
-                    </Link>
-
-                    <div className='flex items-center gap-4 lg:hidden'>
+                    {session?.user ? (
+                        <AvatarDropdown />
+                    ) : (
                         <Link
                             href='/login'
-                            className='p-2 rounded-full bg-color-gray text-body-color hover:bg-theme-primary hover:text-white'
+                            className='hidden py-2 font-semibold border rounded-full border-border-color-1 px-7 bg-theme-secondary hover:text-white hover:bg-theme-primary lg:block'
+                            aria-label='Log in to your account'
                         >
-                            <UserRound />
+                            Log in
                         </Link>
+                    )}
+
+                    <div className='flex items-center gap-4 lg:hidden'>
+                        {session?.user && <AvatarDropdown />}
 
                         {/* Mobile menu */}
                         <Sheet>
@@ -113,11 +118,11 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
                                 </SheetHeader>
 
                                 <ul className='flex flex-col mt-8 mb-6'>
-                                    {navLink.map(({ title, url }, index) => (
+                                    {mobileNavLink.map(({ title, url }, index) => (
                                         <li
                                             key={title}
                                             className={`py-2 border-t ${
-                                                index === navLink.length - 1 ? 'border-b' : ''
+                                                index === mobileNavLink.length - 1 ? 'border-b' : ''
                                             }`}
                                         >
                                             <Link

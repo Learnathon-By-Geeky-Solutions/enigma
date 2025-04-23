@@ -26,7 +26,7 @@ const AuthLayout = ({
                     }
                 >
                     <Image src={GOOGLE_ICON} alt='Google' />
-                    Continue with google
+                    Continue with Google
                 </button>
                 <div className='account__divider'>
                     <span>or</span>
