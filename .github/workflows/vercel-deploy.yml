@@ -2,7 +2,7 @@ name: Deploy to Vercel
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
@@ -36,3 +36,4 @@ jobs:
           vercel-args: '--prod'
           working-directory: ./frontend
           scope: ${{ secrets.VERCEL_ORG_ID }}
+          

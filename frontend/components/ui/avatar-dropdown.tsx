@@ -1,4 +1,5 @@
 import { UserRound } from 'lucide-react';
+import { signOut } from 'next-auth/react';
 import Link from 'next/link';
 
 import {
@@ -22,7 +23,7 @@ const AvatarDropdown = () => {
                 <DropdownMenuItem>
                     <Link href='/profile'>Profile</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>Log out</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => signOut()}>Log out</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );
