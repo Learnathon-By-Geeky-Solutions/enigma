@@ -4,7 +4,8 @@ import PhoneIcon from '../icons/phone-icon';
 
 const ContactInfo = () => {
     return (
-        <div className='contact-info-wrap'>
+        <div className='contact-info-wrap' aria-labelledby='contact-info-heading'>
+            <h3 id='contact-info-heading' className='sr-only'>Contact Information</h3>
             <ul className='contact-list-wrap'>
                 <li>
                     <div className='icon'>
@@ -23,8 +24,8 @@ const ContactInfo = () => {
                     </div>
                     <div className='content'>
                         <h4 className='title'>Phone</h4>
-                        <a href='tel:0123456789'>+1 (800) 123 456 789</a>
-                        <a href='tel:0987654321'>+1 (800) 987 654 321</a>
+                        <a href='tel:+1800123456789'>+1 (800) 123 456 789</a>
+                        <a href='tel:+1800987654321'>+1 (800) 987 654 321</a>
                     </div>
                 </li>
                 <li>

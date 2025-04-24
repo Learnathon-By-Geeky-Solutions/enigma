@@ -17,7 +17,7 @@ import PopupVideo from '../shared/popup-video';
 
 import Container from '../ui/container';
 
-const HAboutUs = () => {
+const HomePageAboutUs = () => {
     const title = {
         text1: 'Thousand Of Top',
         text2: 'Courses',
@@ -63,4 +63,4 @@ const HAboutUs = () => {
     );
 };
 
-export default HAboutUs;
+export default HomePageAboutUs;

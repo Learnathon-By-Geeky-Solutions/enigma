@@ -23,10 +23,18 @@ const AvatarDropdown = () => {
             <DropdownMenuContent className='w-40 bg-white' align='end' sideOffset={5}>
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator className='bg-gray-100' />
-                <DropdownMenuItem>
+                <DropdownMenuItem asChild>
                     <Link href='/profile'>Profile</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => signOut()}>Log out</DropdownMenuItem>
+                <DropdownMenuItem 
+                    onClick={() => {
+                        if (window.confirm('Are you sure you want to log out?')) {
+                            signOut({ callbackUrl: '/' });
+                        }
+                    }}
+                >
+                    Log out
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );

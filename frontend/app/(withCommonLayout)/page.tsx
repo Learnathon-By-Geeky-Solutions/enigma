@@ -1,6 +1,6 @@
 import Banner from '@/components/home/Banner';
 import Faq from '@/components/home/Faq';
-import HAboutUs from '@/components/home/HAboutUs';
+import HomePageAboutUs from '@/components/home/HomePageAboutUs';
 import TopCategories from '@/components/home/TopCategories';
 import Newsletter from '@/components/shared/Newsletter';
 import Partners from '@/components/shared/Partners';
@@ -18,7 +18,7 @@ export default function Home() {
       <Banner />
       <TopCategories />
       <Partners />
-      <HAboutUs />
+      <HomePageAboutUs />
       <Newsletter />
       <Faq />
       {/* latest blogs */}
