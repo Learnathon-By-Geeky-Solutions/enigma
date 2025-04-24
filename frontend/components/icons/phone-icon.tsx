@@ -25,7 +25,7 @@ const PhoneIcon = () => {
             </g>
             <defs>
                 <clipPath id='clip0_0_267'>
-                    <rect width='30' height='30' fill='white'></rect>
+                    <rect width='30' height='30' fill='white' />
                 </clipPath>
             </defs>
             <svg

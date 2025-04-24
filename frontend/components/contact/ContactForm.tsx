@@ -90,7 +90,7 @@ const ContactForm = () => {
                     </div>
                     <div className='w-full'>
                         <div className='form-grp'>
-                            <input name='user_phone' type='phone' placeholder='Phone *' />
+                            <input name='user_phone' type='tel' placeholder='Phone *' />
                             {errors.user_phone && <p className='form_error'>{errors.user_phone}</p>}
                         </div>
                     </div>

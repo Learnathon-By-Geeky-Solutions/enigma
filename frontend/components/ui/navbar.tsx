@@ -22,6 +22,8 @@ type UserProps = {
     };
 };
 
+type ThrottledFunction = (...args: unknown[]) => void;
+
 const Navbar = ({ session }: { session: UserProps | null }) => {
     const pathname = usePathname();
     const [hasShadow, setHasShadow] = useState(false);
@@ -31,16 +33,22 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
 
     useEffect(() => {
         // Throttle function to limit execution frequency
-        const throttle = (func: (...args: unknown[]) => void, limit: number): ((...args: unknown[]) => void) => {
+        const throttle = (func: ThrottledFunction, limit: number): ThrottledFunction => {
             let inThrottle: boolean;
 
-            return function (this: unknown, ...args: unknown[]) {
+            const resetThrottle = () => {
+                inThrottle = false;
+            };
+
+            const throttledFunction: ThrottledFunction = function (this: unknown, ...args: unknown[]) {
                 if (!inThrottle) {
                     func.apply(this, args);
                     inThrottle = true;
-                    setTimeout(() => (inThrottle = false), limit);
+                    setTimeout(resetThrottle, limit);
                 }
             };
+
+            return throttledFunction;
         };
 
         const handleScroll = throttle(() => {

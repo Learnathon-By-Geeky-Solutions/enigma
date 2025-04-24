@@ -36,4 +36,3 @@ jobs:
           vercel-args: '--prod'
           working-directory: ./frontend
           scope: ${{ secrets.VERCEL_ORG_ID }}
-          

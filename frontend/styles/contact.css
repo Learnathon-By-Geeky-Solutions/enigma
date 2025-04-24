@@ -107,10 +107,6 @@
     outline-style: none;
 }
 
-.contact-form-wrap p {
-    margin-bottom: 15px;
-}
-
 p.form_error {
     color: red;
     font-size: 14px;

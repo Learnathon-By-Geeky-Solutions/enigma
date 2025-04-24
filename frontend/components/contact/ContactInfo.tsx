@@ -24,7 +24,7 @@ const ContactInfo = () => {
                     <div className='content'>
                         <h4 className='title'>Phone</h4>
                         <a href='tel:0123456789'>+1 (800) 123 456 789</a>
-                        <a href='tel:0123456789'>+1 (800) 123 456 789</a>
+                        <a href='tel:0987654321'>+1 (800) 987 654 321</a>
                     </div>
                 </li>
                 <li>
@@ -33,8 +33,8 @@ const ContactInfo = () => {
                     </div>
                     <div className='content'>
                         <h4 className='title'>E-mail Address</h4>
-                        <a href='mailto:info@gmail.com'>info@gmail.com</a>
-                        <a href='mailto:info@gmail.com'>info@gmail.com</a>
+                        <a href='mailto:info@example.com'>info@example.com</a>
+                        <a href='mailto:support@example.com'>support@example.com</a>
                     </div>
                 </li>
             </ul>

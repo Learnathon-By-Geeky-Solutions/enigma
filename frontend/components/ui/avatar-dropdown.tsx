@@ -14,7 +14,10 @@ import {
 const AvatarDropdown = () => {
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className='p-2 rounded-full bg-color-gray text-body-color hover:bg-theme-primary hover:text-white outline-none'>
+            <DropdownMenuTrigger
+                aria-label='Open user menu'
+                className='p-2 rounded-full outline-none bg-color-gray text-body-color hover:bg-theme-primary hover:text-white'
+            >
                 <UserRound />
             </DropdownMenuTrigger>
             <DropdownMenuContent className='w-40 bg-white' align='end' sideOffset={5}>
