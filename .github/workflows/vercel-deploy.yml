@@ -19,7 +19,7 @@ jobs:
           node-version: '20'
 
       - name: Cache Node.js dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ./frontend/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('./frontend/package-lock.json') }}
@@ -43,4 +43,3 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
           working-directory: ./frontend
-          scope: ${{ secrets.VERCEL_ORG_ID }}

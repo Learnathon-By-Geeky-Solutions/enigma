@@ -29,8 +29,8 @@ const Footer = () => {
                                 has.
                             </p>
                             <div className='mt-4 font-semibold text-color-gray-1'>
-                                <h4>463 7th Ave, NY 10018, USA</h4>
-                                <h4 className='mt-1.5'>+123 88 9900 456</h4>
+                                <p>463 7th Ave, NY 10018, USA</p>
+                                <p className='mt-1.5'>+123 88 9900 456</p>
                             </div>
                         </div>
                     </div>
