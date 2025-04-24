@@ -13,15 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Set up Node.js with caching
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Cache Node.js dependencies
+      - name: Cache dependencies & Next.js cache
         uses: actions/cache@v4
         with:
-          path: ./frontend/node_modules
+          path: |
+            ./frontend/node_modules
+            ./frontend/.next/cache
           key: ${{ runner.os }}-node-${{ hashFiles('./frontend/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
