@@ -7,7 +7,12 @@ import TopNav from '@/components/ui/topnav';
 import { authOptions } from '@/utils/authOptions';
 
 const CommonLayout = async ({ children }: { children: React.ReactNode }) => {
-    const session = await getServerSession(authOptions);
+    let session = null;
+    try {
+        session = await getServerSession(authOptions);
+    } catch (error) {
+        console.error('Session retrieval error:', error);
+    }
 
     return (
         <div className='flex flex-col min-h-screen'>

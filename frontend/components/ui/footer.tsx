@@ -28,10 +28,11 @@ const Footer = () => {
                                 When an unknown printer took galley of type and scrambled it to make pspecimen bookt
                                 has.
                             </p>
-                            <div className='mt-4 font-semibold'>
-                                <h4>463 7th Ave, NY 10018, USA</h4>
-                                <h4 className='mt-1.5'>+123 88 9900 456</h4>
-                            </div>
+                            <address className='mt-4 not-italic font-semibold'>
+                                463 7th Ave, NY 10018, USA
+                                <br />
+                                <a href='tel:+123889900456' className='mt-1.5 inline-block'>+123 88 9900 456</a>
+                            </address>
                         </div>
                     </div>
 

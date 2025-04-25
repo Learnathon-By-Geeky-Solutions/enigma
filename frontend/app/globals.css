@@ -30,7 +30,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: var(--text-heading-color);
@@ -114,6 +115,20 @@ label {
     color: var(--color-black-1);
     transform: translateX(3px);
     transform-origin: left center;
+}
+
+.btn-two {
+    background: var(--theme-secondary);
+    border: 2px solid var(--color-black-3);
+    box-shadow: 4px 4px #3d3d3d;
+    color: var(--color-black-3);
+}
+
+.btn-two:hover {
+    background: var(--theme-primary);
+    border-color: var(--theme-primary);
+    box-shadow: none;
+    color: var(--color-white);
 }
 
 .alltuchtopdown {

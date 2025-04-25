@@ -1,3 +1,4 @@
+import ContactArea from '@/components/contact/ContactArea';
 import Breadcrumbs from '@/components/shared/Breadcrumbs';
 
 export const metadata = {
@@ -9,6 +10,7 @@ export default function Contact() {
     return (
         <>
             <Breadcrumbs title='Contact With Us' />
+            <ContactArea />
         </>
     );
 }
